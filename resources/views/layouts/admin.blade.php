@@ -45,7 +45,7 @@
                             <div class="center-heading">Main Home</div>
                             <ul class="menu-list">
                                 <li class="menu-item">
-                                    <a href="/" class="">
+                                    <a href="{{route('dashboard')}}" class="">
                                         <div class="icon"><i class="icon-grid"></i></div>
                                         <div class="text">Dashboard</div>
                                     </a>
@@ -74,11 +74,18 @@
                                 </li> --}}
 
                                 <li class="menu-item">
+                                    <a href="{{route('home-slider')}}" class="active">
+                                        <div class="icon"><i class="icon-home"></i></div>
+                                        <div class="text">Home Slider</div>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
                                     <a href="" class="">
                                         <div class="icon"><i class="icon-settings"></i></div>
                                         <div class="text">Settings</div>
                                     </a>
                                 </li>
+
                             </ul>
                         </div>
                     </div>

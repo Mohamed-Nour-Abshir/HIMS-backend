@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\Admin\DashboardComponent;
+use App\Livewire\Admin\HomeSlider\HomeSliderComponent;
 use App\Livewire\AdmissionFeesComponent;
 use App\Livewire\AffiliateComponent;
 use App\Livewire\ApplyCourseComponent;
@@ -30,4 +31,5 @@ Route::get('/apply-now', ApplyCourseComponent::class)->name('apply');
 
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'),'verified',])->group(function () {
     Route::get('/dashboard', DashboardComponent::class)->name('dashboard');
+    Route::get('admin/home-slider', HomeSliderComponent::class)->name('home-slider');
 });
