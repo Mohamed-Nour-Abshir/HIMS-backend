@@ -3,6 +3,7 @@
 use App\Livewire\Admin\DashboardComponent;
 use App\Livewire\Admin\HomeSlider\EditHomeSliderComponent;
 use App\Livewire\Admin\HomeSlider\HomeSliderComponent;
+use App\Livewire\Admin\Settings\SettingsComponent;
 use App\Livewire\AdmissionFeesComponent;
 use App\Livewire\AffiliateComponent;
 use App\Livewire\ApplyCourseComponent;
@@ -34,4 +35,5 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'),'verified',]
     Route::get('/dashboard', DashboardComponent::class)->name('dashboard');
     Route::get('admin/home-slider', HomeSliderComponent::class)->name('home-slider');
     Route::get('admin/home-slider/edit/{id}', EditHomeSliderComponent::class)->name('home-slider.edit');
+    Route::get('admin/settings', SettingsComponent::class)->name('settings');
 });

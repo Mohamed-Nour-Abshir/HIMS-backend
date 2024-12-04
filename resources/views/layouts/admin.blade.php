@@ -75,7 +75,7 @@
                                     </a>
                                 </li>
                                 <li class="menu-item">
-                                    <a href="" class="">
+                                    <a href="{{route('settings')}}" class="{{ Request::is('admin/settings') ? 'active' : '' }}">
                                         <div class="icon"><i class="icon-settings"></i></div>
                                         <div class="text">Settings</div>
                                     </a>

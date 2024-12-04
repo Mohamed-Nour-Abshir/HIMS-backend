@@ -250,7 +250,7 @@
 					<div class="appoinment-content">
 						<img src="images/about/img-3.jpg" alt="" class="img-fluid">
 						<div class="emergency">
-							<h2 class="text-lg"><i class="icofont-phone-circle text-lg"></i>0 1730-191922</h2>
+							<h2 class="text-lg"><i class="icofont-phone-circle text-lg"></i>{{$settings->web_phone}}</h2>
 						</div>
 					</div>
 				</div>
