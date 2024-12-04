@@ -99,12 +99,12 @@
                     <fieldset class="description">
                         <div class="mb-10 body-title">Course Module <span class="tf-color-1">*</span>
                         </div>
-                        <textarea class="mb-10 @if('course_module') is-invalid @endif"  placeholder="Course Module"
-                            wire:model='course_module'></textarea>
+                        <textarea class="mb-10 @if('course_modules') is-invalid @endif"  placeholder="Course Module"
+                            wire:model='course_modules'></textarea>
 
                         @if('course_module')
                             <div class="text-3xl invalid-feedback" style="font-size: 1.5rem">
-                                {{ $errors->first('course_module') }}
+                                {{ $errors->first('course_modules') }}
                             </div>
                         @endif
                     </fieldset>

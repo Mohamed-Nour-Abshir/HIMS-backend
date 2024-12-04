@@ -30,7 +30,7 @@ class CreateCourseComponent extends Component
         $this->validate([
             'course_name' => 'required|string|max:255',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            // 'course_modules' => 'required|string',
+            'course_modules' => 'required|string',
             'duration' => 'required|string',
             'lectures' => 'required|integer',
             'hours' => 'required|integer',
