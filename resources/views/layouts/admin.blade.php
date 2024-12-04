@@ -39,7 +39,7 @@
             <div class="layout-wrap">
                 <div class="section-menu-left">
                     <div class="box-logo">
-                        <a href="index.html" id="site-logo-inner">
+                        <a href="/" id="site-logo-inner">
                             <style>
                                 .gradient-text {
                                     background: linear-gradient(to right, #223a66, #e02453);
