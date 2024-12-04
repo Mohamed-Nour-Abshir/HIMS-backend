@@ -1,9 +1,9 @@
 <div>
     <div class="main-content-inner">
         <div class="main-content-wrap">
-            <div class="flex items-center flex-wrap justify-between gap20 mb-27">
+            <div class="flex flex-wrap items-center justify-between gap20 mb-27">
                 <h3>Home slider</h3>
-                <ul class="breadcrumbs flex items-center flex-wrap justify-start gap10">
+                <ul class="flex flex-wrap items-center justify-start breadcrumbs gap10">
                     <li>
                         <a href="{{route('dashboard')}}">
                             <div class="text-tiny">Dashboard</div>
@@ -40,17 +40,17 @@
                                             <img src="{{asset('assets/images/Sliders')}}/{{$slider?->image}}" alt="" class="image" width="300">
                                         </div>
                                     </td>
-                                    <td>{{$slider->title}}</td>
-                                    <td>{{$slider->sub_title}}</td>
-                                    <td>{{$slider->description}}</td>
+                                    <td>{{$slider?->title}}</td>
+                                    <td>{{$slider?->sub_title}}</td>
+                                    <td>{{$slider?->description}}</td>
                                     <td>
                                         <div class="list-icon-function">
-                                            <a href="{{route('home-slider.edit', $slider->id)}}">
+                                            <a href="{{route('home-slider.edit', $slider->id ?? "1")}}">
                                                 <div class="item edit">
                                                     <i class="icon-edit"></i> Edit
                                                 </div>
                                             </a>
-                                            
+
                                         </div>
                                     </td>
                                 </tr>
@@ -58,7 +58,7 @@
                         </table>
                     </div>
                     <div class="divider"></div>
-                    <div class="flex items-center justify-between flex-wrap gap10 wgp-pagination">
+                    <div class="flex flex-wrap items-center justify-between gap10 wgp-pagination">
 
                     </div>
                 </div>
