@@ -21,8 +21,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .toast {
-                min-width: 350px; 
-                min-height: 70px;  
+                min-width: 350px;
+                min-height: 70px;
             }
         .toast-message {
             font-size: 18px;
@@ -48,7 +48,7 @@
                                     }
                             </style>
                             <img class="" id="logo_header" alt="" src="{{asset('assets/images/logo-removebg-preview.png')}}"
-                                data-light="{{asset('assets/images/logo-removebg-preview.png')}}" data-dark="{{asset('assets/images/logo-removebg-preview.png')}}" width="50"> <span class="h3 mt-5 ms-3 gradient-text">HIMS</span>
+                                data-light="{{asset('assets/images/logo-removebg-preview.png')}}" data-dark="{{asset('assets/images/logo-removebg-preview.png')}}" width="50"> <span class="mt-5 h3 ms-3 gradient-text">HIMS</span>
                         </a>
                         <div class="button-show-hide">
                             <i class="icon-menu-left"></i>
@@ -75,6 +75,12 @@
                                     </a>
                                 </li>
                                 <li class="menu-item">
+                                    <a href="{{route('admin.course')}}" class="@if(request()->routeIs('admin.course') || request()->routeIs('course.create') || request()->routeIs('course.edit')) active @endif">
+                                        <div class="icon"><i class="icon-home"></i></div>
+                                        <div class="text">Manage Course</div>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
                                     <a href="" class="">
                                         <div class="icon"><i class="icon-settings"></i></div>
                                         <div class="text">Settings</div>
@@ -93,14 +99,14 @@
                                 <a href="/">
                                     <img class="" id="logo_header_mobile" alt="" src="{{asset('assets/images/logo-removebg-preview.png')}}"
                                         data-light="{{asset('assets/images/logo-removebg-preview.png')}}" data-dark="{{asset('assets/images/logo-removebg-preview.png')}}"
-                                        data-width="154px" data-height="52px" data-retina="{{asset('assets/images/logo-removebg-preview.png')}}" width="50"><span class="h3 mt-5 ms-3 gradient-text">HIMS</span>
+                                        data-width="154px" data-height="52px" data-retina="{{asset('assets/images/logo-removebg-preview.png')}}" width="50"><span class="mt-5 h3 ms-3 gradient-text">HIMS</span>
                                 </a>
                                 <div class="button-show-hide">
                                     <i class="icon-menu-left"></i>
                                 </div>
 
 
-                                {{-- <form class="form-search flex-grow">
+                                {{-- <form class="flex-grow form-search">
                                     <fieldset class="name">
                                         <input type="text" placeholder="Search here..." class="show-search" name="name"
                                             tabindex="2" value="" aria-required="true" required="">
@@ -118,11 +124,11 @@
                                             </li>
                                             <li>
                                                 <ul>
-                                                    <li class="product-item gap14 mb-10">
+                                                    <li class="mb-10 product-item gap14">
                                                         <div class="image no-bg">
                                                             <img src="images/products/17.png" alt="">
                                                         </div>
-                                                        <div class="flex items-center justify-between gap20 flex-grow">
+                                                        <div class="flex items-center justify-between flex-grow gap20">
                                                             <div class="name">
                                                                 <a href="product-list.html" class="body-text">Dog Food
                                                                     Rachael Ray Nutrish®</a>
@@ -132,11 +138,11 @@
                                                     <li class="mb-10">
                                                         <div class="divider"></div>
                                                     </li>
-                                                    <li class="product-item gap14 mb-10">
+                                                    <li class="mb-10 product-item gap14">
                                                         <div class="image no-bg">
                                                             <img src="images/products/18.png" alt="">
                                                         </div>
-                                                        <div class="flex items-center justify-between gap20 flex-grow">
+                                                        <div class="flex items-center justify-between flex-grow gap20">
                                                             <div class="name">
                                                                 <a href="product-list.html" class="body-text">Natural
                                                                     Dog Food Healthy Dog Food</a>
@@ -150,7 +156,7 @@
                                                         <div class="image no-bg">
                                                             <img src="images/products/19.png" alt="">
                                                         </div>
-                                                        <div class="flex items-center justify-between gap20 flex-grow">
+                                                        <div class="flex items-center justify-between flex-grow gap20">
                                                             <div class="name">
                                                                 <a href="product-list.html" class="body-text">Freshpet
                                                                     Healthy Dog Food and Cat</a>
@@ -169,11 +175,11 @@
                                             </li>
                                             <li>
                                                 <ul>
-                                                    <li class="product-item gap14 mb-10">
+                                                    <li class="mb-10 product-item gap14">
                                                         <div class="image no-bg">
                                                             <img src="images/products/20.png" alt="">
                                                         </div>
-                                                        <div class="flex items-center justify-between gap20 flex-grow">
+                                                        <div class="flex items-center justify-between flex-grow gap20">
                                                             <div class="name">
                                                                 <a href="product-list.html" class="body-text">Sojos
                                                                     Crunchy Natural Grain Free...</a>
@@ -183,11 +189,11 @@
                                                     <li class="mb-10">
                                                         <div class="divider"></div>
                                                     </li>
-                                                    <li class="product-item gap14 mb-10">
+                                                    <li class="mb-10 product-item gap14">
                                                         <div class="image no-bg">
                                                             <img src="images/products/21.png" alt="">
                                                         </div>
-                                                        <div class="flex items-center justify-between gap20 flex-grow">
+                                                        <div class="flex items-center justify-between flex-grow gap20">
                                                             <div class="name">
                                                                 <a href="product-list.html" class="body-text">Kristin
                                                                     Watson</a>
@@ -197,11 +203,11 @@
                                                     <li class="mb-10">
                                                         <div class="divider"></div>
                                                     </li>
-                                                    <li class="product-item gap14 mb-10">
+                                                    <li class="mb-10 product-item gap14">
                                                         <div class="image no-bg">
                                                             <img src="images/products/22.png" alt="">
                                                         </div>
-                                                        <div class="flex items-center justify-between gap20 flex-grow">
+                                                        <div class="flex items-center justify-between flex-grow gap20">
                                                             <div class="name">
                                                                 <a href="product-list.html" class="body-text">Mega
                                                                     Pumpkin Bone</a>
@@ -215,7 +221,7 @@
                                                         <div class="image no-bg">
                                                             <img src="images/products/23.png" alt="">
                                                         </div>
-                                                        <div class="flex items-center justify-between gap20 flex-grow">
+                                                        <div class="flex items-center justify-between flex-grow gap20">
                                                             <div class="name">
                                                                 <a href="product-list.html" class="body-text">Mega
                                                                     Pumpkin Bone</a>
@@ -246,7 +252,7 @@
                                                     </span>
                                                 @endif
                                                 <span class="flex flex-column">
-                                                    <span class="body-title mb-2">{{Auth::user()->name}}</span>
+                                                    <span class="mb-2 body-title">{{Auth::user()->name}}</span>
                                                     <span class="text-tiny">{{Auth::user()->role}}</span>
                                                 </span>
                                             </span>
@@ -293,8 +299,8 @@
 
     <script src="{{asset('assets/admin/js/jquery.min.js')}}"></script>
     <script src="{{asset('assets/admin/js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('assets/admin/js/bootstrap-select.min.js')}}"></script>   
-    <script src="{{asset('assets/admin/js/sweetalert.min.js')}}"></script>    
+    <script src="{{asset('assets/admin/js/bootstrap-select.min.js')}}"></script>
+    <script src="{{asset('assets/admin/js/sweetalert.min.js')}}"></script>
     <script src="{{asset('assets/admin/js/apexcharts/apexcharts.js')}}"></script>
     <script src="{{asset('assets/admin/js/main.js')}}"></script>
     <!-- Toastr JS -->

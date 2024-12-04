@@ -7,7 +7,7 @@ body {
 }
 
 .wg-table.table-all-user>* {
-    min-width: 1260px;
+    /* min-width: 1260px; */
 }
 
 .wgp-pagination svg {
@@ -84,7 +84,7 @@ body {
     margin: 0 auto;
 }
 .wg-table.table-all-user>* {
-    min-width: 1260px;
+    /* min-width: 1260px; */
 }
 
 /*------*/
