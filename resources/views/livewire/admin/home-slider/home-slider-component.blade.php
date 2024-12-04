@@ -37,7 +37,7 @@
                                     <td>1</td>
                                     <td class="pname">
                                         <div class="image">
-                                            <img src="{{asset('assets/images/Sliders')}}/{{$slider->image}}" alt="" class="image" width="300">
+                                            <img src="{{asset('assets/images/Sliders')}}/{{$slider?->image}}" alt="" class="image" width="300">
                                         </div>
                                     </td>
                                     <td>{{$slider->title}}</td>
