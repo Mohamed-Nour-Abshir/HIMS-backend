@@ -1,15 +1,25 @@
 <div>
-    	<!-- Slider Start -->
+    <!-- Slider Start -->
+	<style>
+		.banner {
+			position: relative;
+			overflow: hidden;
+			background: #fff;
+			background: url("{{asset('assets/images/Sliders')}}/{{$slider->image}}") no-repeat;
+			background-size: cover;
+			min-height: 550px;
+			}
+	</style>
 	<section class="banner">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-md-12 col-xl-7">
 					<div class="block">
 						<div class="divider mb-3"></div>
-						<span class="text-uppercase text-sm letter-spacing ">Heartbeat Institute of Medical Sciences</span>
-						<h1 class="mb-3 mt-3">Welcome to HIMS</h1>
+						<span class="text-uppercase text-sm letter-spacing ">{{$slider->sub_title}}</span>
+						<h1 class="mb-3 mt-3">{{$slider->title}}</h1>
 						
-						<p class="mb-4 pr-5">A repudiandae ipsam labore ipsa voluptatum quidem quae laudantium quisquam aperiam maiores sunt fugit, deserunt rem suscipit placeat.</p>
+						<p class="mb-4 pr-5">{{$slider->description}}</p>
 						<div class="btn-container ">
 							<a href="{{route('apply')}}" class="btn btn-main-2 btn-icon btn-round-full">Make admission<i class="icofont-simple-right ml-2  "></i></a>
 						</div>

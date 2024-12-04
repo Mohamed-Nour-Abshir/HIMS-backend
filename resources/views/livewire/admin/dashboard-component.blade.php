@@ -2,64 +2,64 @@
     <div class="main-content-inner">
 
         <div class="main-content-wrap">
-            <div class="tf-section-2 mb-30">
+            <div class="tf-section-1 mb-30">
                 <div class="flex gap20 flex-wrap-mobile">
                     <div class="w-full">
 
-                        <div class="wg-chart-default mb-20">
+                        <div class="wg-chart-default mb-20 bg-primary">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap14">
                                     <div class="image ic-bg">
-                                        <i class="icon-shopping-bag"></i>
+                                        <i class="icon-shopping-bag" style="color: #fff !important;"></i>
                                     </div>
                                     <div>
-                                        <div class="body-text mb-2">Total Applications</div>
-                                        <h4>3</h4>
+                                        <div class="body-text mb-2 text-light">Total Applications</div>
+                                        <h4 class="text-light">3</h4>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
 
-                        <div class="wg-chart-default mb-20">
+                        <div class="wg-chart-default mb-20 bg-success">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap14">
                                     <div class="image ic-bg">
-                                        <i class="icon-shopping-bag"></i>
+                                        <i class="icon-shopping-bag" style="color: #fff !important;"></i>
                                     </div>
                                     <div>
-                                        <div class="body-text mb-2">Total Courses</div>
-                                        <h4>6</h4>
+                                        <div class="body-text mb-2 text-light">Total Courses</div>
+                                        <h4 class="text-light">6</h4>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
 
-                        <div class="wg-chart-default mb-20">
+                        <div class="wg-chart-default mb-20 bg-info">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap14">
                                     <div class="image ic-bg">
-                                        <i class="icon-shopping-bag"></i>
+                                        <i class="icon-shopping-bag" style="color: #fff !important;"></i>
                                     </div>
                                     <div>
-                                        <div class="body-text mb-2">Team</div>
-                                        <h4>3</h4>
+                                        <div class="body-text mb-2 text-light">Team</div>
+                                        <h4 class="text-light">3</h4>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
 
-                        <div class="wg-chart-default">
+                        <div class="wg-chart-default bg-warning">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap14">
                                     <div class="image ic-bg">
-                                        <i class="icon-shopping-bag"></i>
+                                        <i class="icon-shopping-bag" style="color: #fff !important;"></i>
                                     </div>
                                     <div>
-                                        <div class="body-text mb-2">Teachers</div>
-                                        <h4>4</h4>
+                                        <div class="body-text mb-2 text-light">Teachers</div>
+                                        <h4 class="text-light">4</h4>
                                     </div>
                                 </div>
                             </div>
@@ -69,45 +69,45 @@
 
                     <div class="w-full">
 
-                        <div class="wg-chart-default mb-20">
+                        <div class="wg-chart-default mb-20 bg-dark">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap14">
                                     <div class="image ic-bg">
-                                        <i class="icon-shopping-bag"></i>
+                                        <i class="icon-shopping-bag" style="color: #fff !important;"></i>
                                     </div>
                                     <div>
-                                        <div class="body-text mb-2">Notice</div>
-                                        <h4>0</h4>
+                                        <div class="body-text mb-2 text-light">Notice</div>
+                                        <h4 class="text-light">0</h4>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
 
-                        <div class="wg-chart-default mb-20">
+                        <div class="wg-chart-default mb-20 bg-secondary">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap14">
                                     <div class="image ic-bg">
-                                        <i class="icon-shopping-bag"></i>
+                                        <i class="icon-shopping-bag" style="color: #fff !important;"></i>
                                     </div>
                                     <div>
-                                        <div class="body-text mb-2">News</div>
-                                        <h4>0</h4>
+                                        <div class="body-text mb-2 text-light">News</div>
+                                        <h4 class="text-light">0</h4>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
 
-                        <div class="wg-chart-default mb-20">
+                        <div class="wg-chart-default mb-20 bg-danger">
                             <div class="flex items-center justify-between">
                                 <div class="flex items-center gap14">
                                     <div class="image ic-bg">
-                                        <i class="icon-shopping-bag"></i>
+                                        <i class="icon-shopping-bag" style="color: #fff !important;"></i>
                                     </div>
                                     <div>
-                                        <div class="body-text mb-2">Contacts</div>
-                                        <h4>0</h4>
+                                        <div class="body-text mb-2 text-light">Contacts</div>
+                                        <h4 class="text-light">0</h4>
                                     </div>
                                 </div>
                             </div>

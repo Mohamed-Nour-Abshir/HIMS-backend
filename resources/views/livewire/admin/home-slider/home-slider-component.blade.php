@@ -5,7 +5,7 @@
                 <h3>Home slider</h3>
                 <ul class="breadcrumbs flex items-center flex-wrap justify-start gap10">
                     <li>
-                        <a href="index.html">
+                        <a href="{{route('dashboard')}}">
                             <div class="text-tiny">Dashboard</div>
                         </a>
                     </li>
@@ -21,7 +21,7 @@
             <div class="wg-box">
                 <div class="wg-table table-all-user">
                     <div class="table-responsive">
-                        <table class="table table-striped table-bordered">
+                        <table class="table table-bordered">
                             <thead>
                                 <tr>
                                     <th>#</th>
@@ -37,7 +37,7 @@
                                     <td>1</td>
                                     <td class="pname">
                                         <div class="image">
-                                            <img src="{{asset('assets/images/Sliders')}}/{{$slider->image}}" alt="" class="image">
+                                            <img src="{{asset('assets/images/Sliders')}}/{{$slider->image}}" alt="" class="image" width="300">
                                         </div>
                                     </td>
                                     <td>{{$slider->title}}</td>
@@ -45,7 +45,7 @@
                                     <td>{{$slider->description}}</td>
                                     <td>
                                         <div class="list-icon-function">
-                                            <a href="#">
+                                            <a href="{{route('home-slider.edit', $slider->id)}}">
                                                 <div class="item edit">
                                                     <i class="icon-edit-3"></i>
                                                 </div>
