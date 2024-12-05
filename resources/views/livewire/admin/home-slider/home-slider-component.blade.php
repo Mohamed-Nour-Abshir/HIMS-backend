@@ -40,9 +40,9 @@
                                             <img src="{{asset('assets/images/Sliders')}}/{{$slider?->image}}" alt="" class="image" width="300">
                                         </div>
                                     </td>
-                                    <td>{{$slider?->title}}</td>
-                                    <td>{{$slider?->sub_title}}</td>
-                                    <td>{{$slider?->description}}</td>
+                                    <td>{{$slider->title}}</td>
+                                    <td>{{$slider->sub_title}}</td>
+                                    <td>{{$slider->description}}</td>
                                     <td>
                                         <div class="list-icon-function">
                                             <a href="{{route('home-slider.edit', $slider->id ?? "1")}}">
