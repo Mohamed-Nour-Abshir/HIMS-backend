@@ -56,47 +56,22 @@
 
 
             <!-- faculty list -->
-                <div id="faculty-list" class="mb-4 col-lg-4 col-sm-6 col-md-6 shuffle-item" data-groups="[&quot;faculty&quot;]">
-                    <div class="position-relative doctor-inner-box">
-                        <div class="doctor-profile">
-                        <div class="doctor-img">
-                                <img src="images/team/1.jpg" alt="doctor-image" class="img-fluid w-100">
-                        </div>
-                        </div>
-                        <div class="mt-3 content">
-                            <h4 class="mb-0"><a href="doctor-single.html">Thomas Henry</a></h4>
-                            <p>Cardiology</p>
+
+                @foreach ($faculties as $faculty)
+                    <div id="faculty-list" class="mb-4 col-lg-4 col-sm-6 col-md-6 shuffle-item" data-groups="[&quot;faculty&quot;]">
+                        <div class="position-relative doctor-inner-box">
+                            <div class="doctor-profile">
+                            <div class="doctor-img">
+                                    <img src="{{ asset('assets/images/faculty/'.$faculty->image) }}" alt="{{ $faculty->slug }}" class="img-fluid w-100">
+                            </div>
+                            </div>
+                            <div class="mt-3 content">
+                                <h4 class="mb-0"><a href="doctor-single.html">{{ $faculty?->name }}</a></h4>
+                                <p>{{ $faculty?->designation }}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="mb-4 col-lg-4 col-sm-6 col-md-6 shuffle-item" data-groups="[&quot;faculty&quot;]">
-                        <div class="position-relative doctor-inner-box">
-                            <div class="doctor-profile">
-                                <div class="doctor-img">
-                                <img src="images/team/2.jpg" alt="doctor-image" class="img-fluid w-100">
-                                </div>
-                            </div>
-                            <div class="mt-3 content">
-                                <h4 class="mb-0"><a href="doctor-single.html">Harrision Samuel</a></h4>
-                                <p>Radiology</p>
-                            </div>
-                        </div>
-                </div>
-
-                <div class="mb-4 col-lg-4 col-sm-6 col-md-6 shuffle-item" data-groups="[&quot;faculty&quot;]">
-                        <div class="position-relative doctor-inner-box">
-                            <div class="doctor-profile">
-                                <div class="doctor-img">
-                                <img src="images/team/3.jpg" alt="doctor-image" class="img-fluid w-100">
-                                </div>
-                            </div>
-                            <div class="mt-3 content">
-                                <h4 class="mb-0"><a href="doctor-single.html">Alexandar James</a></h4>
-                                <p>Dental</p>
-                            </div>
-                        </div>
-                </div>
+                @endforeach
 
             <!-- scholarship information  -->
                 <div id="scholarships" class="mb-4 col-lg-12 col-sm-12 col-md-12 shuffle-item" data-groups="[&quot;scholarship&quot;]">

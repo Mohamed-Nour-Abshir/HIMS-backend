@@ -81,6 +81,12 @@
                                     </a>
                                 </li>
                                 <li class="menu-item">
+                                    <a href="{{route('admin.faculty')}}" class="@if(request()->routeIs('admin.faculty') || request()->routeIs('faculty.create') || request()->routeIs('faculty.edit')) active @endif">
+                                        <div class="icon"><i class="icon-book-open"></i></div>
+                                        <div class="text">Manage Faculty</div>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
                                     <a href="{{route('admin.gallery')}}" class="@if(request()->routeIs('admin.gallery') || request()->routeIs('gallery.create') || request()->routeIs('gallery.edit')) active @endif">
                                         <div class="icon"><i class="icon-book-open"></i></div>
                                         <div class="text">Manage Galllery</div>
