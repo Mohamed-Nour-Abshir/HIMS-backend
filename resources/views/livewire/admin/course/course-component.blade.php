@@ -41,9 +41,9 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
+                                            <th>Course name</th>
                                             <th>Image</th>
-                                            <th>Title</th>
-                                            <th>Sub title</th>
+                                            <th>Department</th>
                                             <th>Description</th>
                                             <th>Action</th>
                                         </tr>
@@ -56,7 +56,7 @@
                                                 <td>{{$course?->course_name}}</td>
                                                 <td class="pname">
                                                     <div class="image">
-                                                        <img src="{{asset('assets/images/Sliders')}}/{{$course?->image}}" alt="" class="image" width="300">
+                                                        <img src="{{asset('assets/images/courses')}}/{{$course?->image}}" alt="" class="image" width="300">
                                                     </div>
                                                 </td>
                                                 <td>{{$course?->department}}</td>

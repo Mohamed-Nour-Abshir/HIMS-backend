@@ -2,12 +2,16 @@
 
 namespace App\Livewire;
 
+use App\Models\Course;
 use Livewire\Component;
 
 class CoursesComponent extends Component
 {
     public function render()
     {
-        return view('livewire.courses-component')->layout('layouts.base');
+        $courses = Course::all();
+        return view('livewire.courses-component',[
+            'courses' => $courses
+        ])->layout('layouts.base');
     }
 }

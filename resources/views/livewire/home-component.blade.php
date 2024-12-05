@@ -149,96 +149,23 @@
 			</div>
 
 			<div class="row">
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<div class="mb-4 service-item">
-						<a href="">
-							<!-- <i class="text-lg icofont-laboratory"></i> -->
-							<img src="images/finger.png" alt="" class="img-fluid" width="100%">
-							<br>
-							<h4 class="mt-3 mb-3">Ultrasound Course</h4>
+                @foreach ($courses as $course)
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="mb-4 service-item">
+                            <a href="">
+                                <!-- <i class="text-lg icofont-laboratory"></i> -->
+                                <img src="{{ asset('assets/images/courses/'.$course->image) }}" alt="" class="img-fluid" width="100%">
+                                <br>
+                                <h4 class="mt-3 mb-3">{{ $course->course_name }}</h4>
 
-						<div class="content">
-							<a href="{{route('apply')}}" class="btn btn-main-2 btn-round-full btn-icon">more details | Enrol<i class="ml-3 icofont-simple-right"></i></a>
-						</div>
-					</a>
-					</div>
-				</div>
+                            <div class="content">
+                                <a href="{{route('apply')}}" class="btn btn-main-2 btn-round-full btn-icon">more details | Enrol<i class="ml-3 icofont-simple-right"></i></a>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                @endforeach
 
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<div class="mb-4 service-item">
-						<a href="">
-							<!-- <i class="text-lg icofont-laboratory"></i> -->
-							<img src="images/finger.png" alt="" class="img-fluid" width="100%">
-							<br>
-							<h4 class="mt-3 mb-3">PGD Courses</h4>
-
-						<div class="content">
-							<a href="{{route('apply')}}" class="btn btn-main-2 btn-round-full btn-icon">more details | Enrol<i class="ml-3 icofont-simple-right"></i></a>
-						</div>
-					</a>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<div class="mb-4 service-item">
-						<a href="">
-							<!-- <i class="text-lg icofont-laboratory"></i> -->
-							<img src="images/finger.png" alt="" class="img-fluid" width="100%">
-							<br>
-							<h4 class="mt-3 mb-3">Certificate Courses</h4>
-
-						<div class="content">
-							<a href="{{route('apply')}}" class="btn btn-main-2 btn-round-full btn-icon">more details | Enrol<i class="ml-3 icofont-simple-right"></i></a>
-						</div>
-					</a>
-					</div>
-				</div>
-
-
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<div class="mb-4 service-item">
-						<a href="">
-							<!-- <i class="text-lg icofont-laboratory"></i> -->
-							<img src="images/finger.png" alt="" class="img-fluid" width="100%">
-							<br>
-							<h4 class="mt-3 mb-3">Fellowship Courses</h4>
-
-						<div class="content">
-							<a href="{{route('apply')}}" class="btn btn-main-2 btn-round-full btn-icon">more details | Enrol<i class="ml-3 icofont-simple-right"></i></a>
-						</div>
-					</a>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<div class="mb-4 service-item">
-						<a href="">
-							<!-- <i class="text-lg icofont-laboratory"></i> -->
-							<img src="images/finger.png" alt="" class="img-fluid" width="100%">
-							<br>
-							<h4 class="mt-3 mb-3">Workshop</h4>
-
-						<div class="content">
-							<a href="{{route('apply')}}" class="btn btn-main-2 btn-round-full btn-icon">more details | Enrol<i class="ml-3 icofont-simple-right"></i></a>
-						</div>
-					</a>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<div class="mb-4 service-item">
-						<a href="">
-							<!-- <i class="text-lg icofont-laboratory"></i> -->
-							<img src="images/finger.png" alt="" class="img-fluid" width="100%">
-							<br>
-							<h4 class="mt-3 mb-3">Doctor Events</h4>
-
-						<div class="content">
-							<a href="{{route('apply')}}" class="btn btn-main-2 btn-round-full btn-icon">more details | Enrol<i class="ml-3 icofont-simple-right"></i></a>
-						</div>
-					</a>
-					</div>
-				</div>
 
 			</div>
 		</div>
@@ -250,7 +177,7 @@
 					<div class="appoinment-content">
 						<img src="images/about/img-3.jpg" alt="" class="img-fluid">
 						<div class="emergency">
-							<h2 class="text-lg"><i class="icofont-phone-circle text-lg"></i>0 1730-191922</h2>
+							<h2 class="text-lg"><i class="text-lg icofont-phone-circle"></i>0 1730-191922</h2>
 						</div>
 					</div>
 				</div>

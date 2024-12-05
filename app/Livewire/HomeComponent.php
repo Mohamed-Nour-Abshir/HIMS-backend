@@ -2,9 +2,10 @@
 
 namespace App\Livewire;
 
-use App\Models\HomeSlider;
+use App\Models\Course;
 use App\Models\Setting;
 use Livewire\Component;
+use App\Models\HomeSlider;
 
 class HomeComponent extends Component
 {
@@ -12,6 +13,7 @@ class HomeComponent extends Component
     {
         $slider = HomeSlider::find(1);
         $settings = Setting::find(1);
-        return view('livewire.home-component', compact('slider', 'settings'))->layout('layouts.base');
+        $courses = Course::all();
+        return view('livewire.home-component', compact('slider', 'settings', 'courses'))->layout('layouts.base');
     }
 }
