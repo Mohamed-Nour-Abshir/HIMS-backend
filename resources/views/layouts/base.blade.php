@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+@php
+	use App\Models\Setting;
+	$settings = Setting::find(1);
+@endphp
 <!-- Basic Page Needs
 ================================================== -->
 <meta charset="utf-8">
@@ -17,7 +20,7 @@
 <!-- theme meta -->
 <meta name="theme-name" content="HIMS" />
 <!-- Favicon -->
-<link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/images/logo.jpg')}}" />
+<link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/images/Settings')}}/{{$settings->web_favicon}}" />
 <!-- 
 Essential stylesheets
 =====================================-->
@@ -37,15 +40,15 @@ Essential stylesheets
 				<div class="row align-items-center">
 					<div class="col-lg-6">
 						<ul class="top-bar-info list-inline-item pl-0 mb-0">
-							<li class="list-inline-item"><a href="mailto:support@gmail.com"><i class="icofont-support-faq mr-2"></i>info@himseducation.com</a></li>
-							<li class="list-inline-item"><i class="icofont-location-pin mr-2"></i>Address: 151/6, Gazi Tower(4th Floor), Panthapath Green Road, Dhaka-1205 </li>
+							<li class="list-inline-item"><a href="mailto:{{$settings->web_email}}"><i class="icofont-support-faq mr-2"></i>{{$settings->web_email}}</a></li>
+							<li class="list-inline-item"><i class="icofont-location-pin mr-2"></i>Address: {{$settings->address}} </li>
 						</ul>
 					</div>
 					<div class="col-lg-6">
 						<div class="text-lg-right top-right-bar mt-2 mt-lg-0">
 							<a href="tel:+23-345-67890">
 								<span>Call Now : </span>
-								<span class="h4">01730-191922</span>
+								<span class="h4">{{$settings->web_phone}}</span>
 							</a>
 						</div>
 					</div>
@@ -55,7 +58,7 @@ Essential stylesheets
 		<nav class="navbar navbar-expand-lg navigation" id="navbar">
 			<div class="container">
 				<a class="navbar-brand" href="/">
-					<img src="{{asset('assets/images/logo-removebg-preview.png')}}" alt="" class="img-fluid" width="50">
+					<img src="{{asset('assets/images/Settings')}}/{{$settings->web_logo}}" alt="" class="img-fluid" width="50">
 					<!-- <h1>HIMS</h1> -->
 				</a>
 
@@ -106,20 +109,20 @@ Essential stylesheets
 				<div class="col-lg-4 mr-auto col-sm-6">
 					<div class="widget mb-5 mb-lg-0">
 						<div class="logo mb-4">
-							<img src="images/logo-removebg-preview.png " alt="" class="img-fluid" width="100">
+							<img src="{{asset('assets/images/Settings')}}/{{$settings->web_logo}} " alt="" class="img-fluid" width="100">
 							<!-- <h1>HIMS</h1> -->
 						</div>
 						<p>Tempora dolorem voluptatum nam vero assumenda voluptate, facilis ad eos obcaecati tenetur veritatis eveniet distinctio possimus.</p>
 
 						<ul class="list-inline footer-socials mt-4">
 							<li class="list-inline-item">
-								<a href="#"><i class="icofont-facebook"></i></a>
+								<a href="{{$settings->facebook_link}}"><i class="icofont-facebook"></i></a>
 							</li>
 							<li class="list-inline-item">
-								<a href="#"><i class="icofont-twitter"></i></a>
+								<a href="{{$settings->twitter_link}}"><i class="icofont-twitter"></i></a>
 							</li>
 							<li class="list-inline-item">
-								<a href="#"><i class="icofont-linkedin"></i></a>
+								<a href="{{$settings->linkedin_link}}"><i class="icofont-linkedin"></i></a>
 							</li>
 						</ul>
 					</div>
@@ -165,15 +168,15 @@ Essential stylesheets
 								<i class="icofont-email mr-3"></i>
 								<span class="h6 mb-0">Support Available for 24/7</span>
 							</div>
-							<h4 class="mt-2"><a href="mailto:support@email.com">info@himseducation.com</a></h4>
+							<h4 class="mt-2"><a href="mailto:{{$settings->web_email}}">{{$settings->web_email}}</a></h4>
 						</div>
 
 						<div class="footer-contact-block">
 							<div class="icon d-flex align-items-center">
 								<i class="icofont-support mr-3"></i>
-								<span class="h6 mb-0">Sat to Thu : 08:30 - 18:00</span>
+								<span class="h6 mb-0">{{$settings->working_hours_days}}</span>
 							</div>
-							<h4 class="mt-2"><a href="tel:+23-345-67890">+880 1730-191922</a></h4>
+							<h4 class="mt-2"><a href="tel:+88{{$settings->web_phone}}">+880 {{$settings->web_phone}}</a></h4>
 						</div>
 					</div>
 				</div>

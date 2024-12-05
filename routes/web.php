@@ -1,7 +1,17 @@
 <?php
 
+<<<<<<< HEAD
 use App\Livewire\HomeComponent;
 use App\Livewire\NewsComponent;
+=======
+use App\Livewire\Admin\DashboardComponent;
+use App\Livewire\Admin\HomeSlider\EditHomeSliderComponent;
+use App\Livewire\Admin\HomeSlider\HomeSliderComponent;
+use App\Livewire\Admin\Settings\SettingsComponent;
+use App\Livewire\AdmissionFeesComponent;
+use App\Livewire\AffiliateComponent;
+use App\Livewire\ApplyCourseComponent;
+>>>>>>> 0905362aedcb4b56bf66e08010c4ee885912d790
 use App\Livewire\ContactComponent;
 use App\Livewire\CoursesComponent;
 use App\Livewire\GalleryComponent;
@@ -37,10 +47,14 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'),'verified',]
     Route::get('/dashboard', DashboardComponent::class)->name('dashboard');
     Route::get('admin/home-slider', HomeSliderComponent::class)->name('home-slider');
     Route::get('admin/home-slider/edit/{id}', EditHomeSliderComponent::class)->name('home-slider.edit');
+<<<<<<< HEAD
 
     Route::prefix('/admin')->group(function () {
         Route::get('/course', CourseComponent::class)->name('admin.course');
         Route::get('/course/create', CreateCourseComponent::class)->name('course.create');
         Route::get('/course/edit/{id}', EditCourseComponent::class)->name('course.edit');
     });
+=======
+    Route::get('admin/settings', SettingsComponent::class)->name('settings');
+>>>>>>> 0905362aedcb4b56bf66e08010c4ee885912d790
 });

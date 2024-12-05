@@ -75,6 +75,7 @@
                                     </a>
                                 </li>
                                 <li class="menu-item">
+<<<<<<< HEAD
                                     <a href="{{route('admin.course')}}" class="@if(request()->routeIs('admin.course') || request()->routeIs('course.create') || request()->routeIs('course.edit')) active @endif">
                                         <div class="icon"><i class="icon-home"></i></div>
                                         <div class="text">Manage Course</div>
@@ -82,6 +83,9 @@
                                 </li>
                                 <li class="menu-item">
                                     <a href="" class="">
+=======
+                                    <a href="{{route('settings')}}" class="{{ Request::is('admin/settings') ? 'active' : '' }}">
+>>>>>>> 0905362aedcb4b56bf66e08010c4ee885912d790
                                         <div class="icon"><i class="icon-settings"></i></div>
                                         <div class="text">Settings</div>
                                     </a>

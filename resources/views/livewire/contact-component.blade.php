@@ -27,21 +27,21 @@
                 <div class="contact-block mb-4 mb-lg-0">
                 <i class="icofont-live-support"></i>
                 <h5>Call Us</h5>
-                +880 1730-191922
+                +88 {{$settings->web_phone}}
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="contact-block mb-4 mb-lg-0">
                 <i class="icofont-support-faq"></i>
                 <h5>Email Us</h5>
-                info@himseducation.com
+                {{$settings->web_email}}
                 </div>
             </div>
             <div class="col-lg-4 col-md-12">
                 <div class="contact-block mb-4 mb-lg-0">
                 <i class="icofont-location-pin"></i>
                 <h5>Location</h5>
-                    151/6, Gazi Tower(4th Floor), Panthapath Green Road, Dhaka-1205
+                {{$settings->address}}
                 </div>
             </div>
             </div>
@@ -111,6 +111,6 @@
     
     
     <div class="google-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.907237113352!2d90.38423272533596!3d23.750687128670197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b986743bbcef%3A0x64d567694c6b8c9!2sGazi%20Tower!5e0!3m2!1sen!2sbd!4v1732944728448!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="{{$settings->map_link}}" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </div>

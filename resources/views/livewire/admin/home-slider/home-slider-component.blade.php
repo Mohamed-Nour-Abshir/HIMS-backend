@@ -47,7 +47,7 @@
                                         <div class="list-icon-function">
                                             <a href="{{route('home-slider.edit', $slider->id ?? "1")}}">
                                                 <div class="item edit">
-                                                    <i class="icon-edit-3"></i>
+                                                    <i class="icon-edit"></i> Edit
                                                 </div>
                                             </a>
 
