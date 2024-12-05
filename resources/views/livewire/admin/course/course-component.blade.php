@@ -32,6 +32,11 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
+                                @if(session()->has('message'))
+                                    <div class="text-3xl text-green-600 text-success" style="font-size: 1.5rem">
+                                        {{ session()->get('message') }}
+                                    </div>
+                                @endif
                                 <table class="table table-bordered ">
                                     <thead>
                                         <tr>
@@ -58,13 +63,13 @@
                                                 <td>{{$course?->description}}</td>
                                                 <td>
                                                     <div class="list-icon-function">
-                                                        <a href="{{route('home-slider.edit', $course->id ?? "1")}}">
+                                                        <a href="{{route('home-slider.edit', $course->id)}}">
                                                             <div class="item edit">
-                                                                <i class="icon-edit-3"></i>
+                                                                <i class="icon-edit"></i>
                                                             </div>
                                                         </a>
-                                                        <a href="{{route('home-slider.edit', $course->id ?? "1")}}">
-                                                            <div class="item edit">
+                                                        <a href="javascript:void(0)" wire:click.prevent="deleteCourse({{$course->id}})">
+                                                            <div class="item trash">
                                                                 <i class="icon-trash"></i>
                                                             </div>
                                                         </a>
