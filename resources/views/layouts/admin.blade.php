@@ -45,7 +45,7 @@
                                     background: linear-gradient(to right, #223a66, #e02453);
                                     -webkit-background-clip: text;
                                     -webkit-text-fill-color: transparent;
-                                    }
+                                    } 
                             </style>
                             <img class="" id="logo_header" alt="" src="{{asset('assets/images/logo-removebg-preview.png')}}"
                                 data-light="{{asset('assets/images/logo-removebg-preview.png')}}" data-dark="{{asset('assets/images/logo-removebg-preview.png')}}" width="50"> <span class="mt-5 h3 ms-3 gradient-text">HIMS</span>
@@ -81,9 +81,15 @@
                                     </a>
                                 </li>
                                 <li class="menu-item">
-                                    <a href="{{route('settings')}}" class="{{ Request::is('admin/settings') ? 'active' : '' }}">
+                                    <a href="{{route('settings')}}" class="{{ Request::is('admin/ settings') ? 'active' : '' }}">
                                         <div class="icon"><i class="icon-settings"></i></div>
                                         <div class="text">Settings</div>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="{{route('contacts')}}" class="{{ Request::is('admin/contacts') ? 'active' : '' }}">
+                                        <div class="icon"><i class="icon-settings"></i></div>
+                                        <div class="text">Contacts</div>
                                     </a>
                                 </li>
 

@@ -62,46 +62,53 @@
             </div>
             <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
-                <form id="contact-form" class="contact__form " method="post" action="mail.php">
+                <form class="contact__form " wire:submit.prevent='Contact'>
                 <!-- form message -->
                 <div class="row">
                     <div class="col-12">
-                    <div class="alert alert-success contact__msg" style="display: none" role="alert">
-                        Your message was sent successfully.
-                    </div>
+                        @if(Session::has('message'))
+                            <div class="alert alert-success contact__msg" role="alert">
+                                {{Session::get('message')}}
+                            </div>
+                        @endif
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-lg-6">
                     <div class="form-group">
-                        <input name="name" id="name" type="text" class="form-control" placeholder="Your Full Name">
+                        <input type="text" class="form-control" placeholder="Your Full Name" wire:model='name'>
+                        @error('name') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
                     </div>
 
                     <div class="col-lg-6">
                     <div class="form-group">
-                        <input name="email" id="email" type="email" class="form-control" placeholder="Your Email Address" required>
+                        <input type="email" class="form-control" placeholder="Your Email Address" wire:model='email'>
+                        @error('email') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
                     </div>
                     <div class="col-lg-6">
                     <div class="form-group">
-                        <input name="subject" id="subject" type="text" class="form-control" placeholder="Your Query Topic" required>
+                        <input type="text" class="form-control" placeholder="Your Query Topic" wire:model='subject'>
+                        @error('subject') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
                     </div>
                     <div class="col-lg-6">
                     <div class="form-group">
-                        <input name="phone" id="phone" type="text" class="form-control" placeholder="Your Phone Number" required>
+                        <input type="text" class="form-control" placeholder="Your Phone Number" wire:model='phone'>
+                        @error('phone') <span class="text-danger">{{$message}}</span> @enderror
                     </div>
                     </div>
                 </div>
 
                 <div class="form-group-2 mb-4">
-                    <textarea name="message" id="message" class="form-control" rows="8" placeholder="Your Message" required></textarea>
+                    <textarea class="form-control" rows="8" placeholder="Your Message" wire:model='message'></textarea>
+                    @error('message') <span class="text-danger">{{$message}}</span> @enderror
                 </div>
 
                 <div>
-                    <input class="btn btn-main btn-round-full" name="submit" type="submit" value="Send Messege"></input>
+                    <input class="btn btn-main btn-round-full" type="submit" value="Send Messege"></input>
                 </div>
                 </form>
             </div>

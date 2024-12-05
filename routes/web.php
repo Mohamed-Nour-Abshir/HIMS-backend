@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Admin\Contact\ContactComponenet;
 use App\Livewire\HomeComponent;
 use App\Livewire\NewsComponent;
 use App\Livewire\ContactComponent;
@@ -39,7 +40,7 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'),'verified',]
     Route::get('admin/home-slider', HomeSliderComponent::class)->name('home-slider');
     Route::get('admin/home-slider/edit/{id}', EditHomeSliderComponent::class)->name('home-slider.edit');
     Route::get('admin/settings', SettingsComponent::class)->name('settings');
-    
+    Route::get('admin/contacts', ContactComponenet::class)->name('contacts');
     Route::prefix('/admin')->group(function () {
         Route::get('/course', CourseComponent::class)->name('admin.course');
         Route::get('/course/create', CreateCourseComponent::class)->name('course.create');

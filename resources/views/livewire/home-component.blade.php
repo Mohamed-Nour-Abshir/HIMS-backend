@@ -44,7 +44,7 @@
 								<li class="d-flex justify-content-between">Thu - Fri : <span>9:00 - 17:00</span></li>
 								<li class="d-flex justify-content-between">Sat - sun : <span>10:00 - 17:00</span></li>
 							</ul>
-							<a href="" class="btn btn-main btn-round-full">Check news</a>
+							<a href="{{route('news')}}" class="btn btn-main btn-round-full">Check news</a>
 						</div>
 
 						<div class="mb-5 feature-item mb-lg-0">
@@ -64,7 +64,7 @@
 							<span>Emegency Cases</span>
 							<h4 class="mb-3">Contact Us</h4>
 							<p>Get ALl time support for emergency.We have introduced the principle of family medicine.Get Conneted with us for any urgency .</p>
-							<a href="" class="btn btn-main btn-round-full">Contact us</a>
+							<a href="{{route('contact')}}" class="btn btn-main btn-round-full">Contact us</a>
 						</div>
 					</div>
 				</div>
