@@ -63,7 +63,7 @@
                                                 <td>{{$course?->description}}</td>
                                                 <td>
                                                     <div class="list-icon-function">
-                                                        <a href="{{route('home-slider.edit', $course->id)}}">
+                                                        <a href="{{route('course.edit', $course->id)}}">
                                                             <div class="item edit">
                                                                 <i class="icon-edit"></i>
                                                             </div>

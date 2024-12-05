@@ -10,6 +10,11 @@ class CourseComponent extends Component
 
     public function deleteCourse($id){
         $course = Course::find($id);
+
+        if($course->image){
+            unlink('assets/images/courses/'.$course->image);
+        }
+
         $course->delete();
 
         session()->flash('message', 'Course Deleted Successfully');
