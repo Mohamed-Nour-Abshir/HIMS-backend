@@ -81,6 +81,12 @@
                                     </a>
                                 </li>
                                 <li class="menu-item">
+                                    <a href="{{route('admin.gallery')}}" class="@if(request()->routeIs('admin.gallery') || request()->routeIs('gallery.create') || request()->routeIs('gallery.edit')) active @endif">
+                                        <div class="icon"><i class="icon-book-open"></i></div>
+                                        <div class="text">Manage Galllery</div>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
 
                                     <a href="{{route('settings')}}" class="{{ Request::is('admin/settings') ? 'active' : '' }}">
                                         <div class="icon"><i class="icon-settings"></i></div>

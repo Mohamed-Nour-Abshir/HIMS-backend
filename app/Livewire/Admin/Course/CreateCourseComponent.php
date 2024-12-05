@@ -16,22 +16,6 @@ class CreateCourseComponent extends Component
     public $department, $regular_price, $discount_price, $description, $status='Active';
 
 
-    // public function updated($propertyName)
-    // {
-    //     $this->validateOnly([
-    //         'course_name' => 'required|string|max:255',
-    //         'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-    //         'course_modules' => 'required|string',
-    //         'duration' => 'required|string',
-    //         'lectures' => 'required|integer',
-    //         'hours' => 'required|integer',
-    //         'department' => 'required|string',
-    //         'regular_price' => 'required|numeric',
-    //         'discount_price' => 'nullable|numeric',
-    //         'description' => 'nullable|string',
-    //         'status' => 'nullable|in:Active,Inactive',
-    //     ]);
-    // }
 
     public function createCourse()
     {

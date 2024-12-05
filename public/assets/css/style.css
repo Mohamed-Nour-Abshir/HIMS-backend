@@ -7,7 +7,7 @@ html {
 
 /* root css  */
 :root {
-  --primary-color: #e12454; 
+  --primary-color: #e12454;
   --secondary-color: #223a66;
   --text-color: #fff;
 }
@@ -1456,7 +1456,7 @@ a:focus {
   top: 50px;
   left: 28.3rem;
   transition: 0.2s linear;
-  
+
 }
 .title_design:hover:before {
   width: 14.7rem;
@@ -1488,7 +1488,7 @@ a:focus {
 }
 .gallery_card{
   cursor: pointer;
-  height: 500px;
+  height: 600px;
 }
 .gallery_card:hover .news_img{
   transform: scale(1);
