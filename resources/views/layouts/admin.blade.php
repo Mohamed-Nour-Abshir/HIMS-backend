@@ -75,6 +75,12 @@
                                     </a>
                                 </li>
                                 <li class="menu-item">
+                                    <a href="{{route('mission.vision')}}" class="@if(request()->routeIs('mission.vision')) active @endif)">
+                                        <div class="icon"><i class="icon-home"></i></div>
+                                        <div class="text">Mission & Vision</div>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
                                     <a href="{{route('admin.course')}}" class="@if(request()->routeIs('admin.course') || request()->routeIs('course.create') || request()->routeIs('course.edit')) active @endif">
                                         <div class="icon"><i class="icon-book-open"></i></div>
                                         <div class="text">Manage Course</div>

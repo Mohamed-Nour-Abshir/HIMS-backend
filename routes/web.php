@@ -63,6 +63,9 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'),'verified',]
         Route::get('/faculty', FacultyComponent::class)->name('admin.faculty');
         Route::get('/faculty/create', CreateFacultyComponent::class)->name('faculty.create');
         Route::get('/faculty/edit/{id}', EditFacultyComponent::class)->name('faculty.edit');
+
+        //  mission.vision.route
+        Route::get('/mission-vision', App\Livewire\Admin\Mission\MissionVisionComponent::class)->name('mission.vision');
     });
 
 
