@@ -117,8 +117,6 @@
                                 </li>
                                 <li class="menu-item">
 
-                                    <a href="{{route('settings')}}" class="{{ Request::is('admin/ settings') ? 'active' : '' }}">
-
                                     <a href="{{route('admin.faculty')}}" class="@if(request()->routeIs('admin.faculty') || request()->routeIs('faculty.create') || request()->routeIs('faculty.edit')) active @endif">
                                         <div class="icon"><i class="icon-book-open"></i></div>
                                         <div class="text">Manage Faculty</div>
@@ -130,7 +128,7 @@
                                         <div class="text">Manage Galllery</div>
                                     </a>
                                 </li>
-                                
+
                                 <li class="menu-item">
 
                                     <a href="{{route('contacts')}}" class="{{ Request::is('admin/contacts') ? 'active' : '' }}">
@@ -138,18 +136,13 @@
                                         <div class="text">Contacts</div>
                                     </a>
                                 </li>
-                                
+
                                 <li class="menu-item">
                                     <a href="{{route('partners')}}" class="{{ Request::is('admin/partners') ? 'active' : '' }}">
                                         <div class="icon"><i class="icon-user"></i></div>
                                         <div class="text">Partners</div>
-
-                                    <a href="{{route('settings')}}" class="{{ Request::is('admin/ settings') ? 'active' : '' }}">
-
-                                        <div class="icon"><i class="icon-settings"></i></div>
-                                        <div class="text">Settings</div>
-
                                     </a>
+
                                 </li>
                                 <li class="menu-item">
 
