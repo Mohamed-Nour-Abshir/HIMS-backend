@@ -14,14 +14,15 @@ use App\Livewire\MissionVisionComponent;
 use App\Livewire\ManagementTeamComponent;
 use App\Livewire\Admin\DashboardComponent;
 use App\Livewire\Admin\Course\CourseComponent;
+use App\Livewire\Admin\Faculty\FacultyComponent;
 use App\Livewire\Admin\Gallery\GalleryComponent;
+use App\Livewire\Admin\Contact\ContactComponenet;
 use App\Livewire\Admin\Course\EditCourseComponent;
 use App\Livewire\Admin\Settings\SettingsComponent;
 use App\Livewire\Admin\Course\CreateCourseComponent;
-use App\Livewire\Admin\Faculty\CreateFacultyComponent;
 use App\Livewire\Admin\Faculty\EditFacultyComponent;
-use App\Livewire\Admin\Faculty\FacultyComponent;
 use App\Livewire\Admin\Gallery\EditGalleryComponent;
+use App\Livewire\Admin\Faculty\CreateFacultyComponent;
 use App\Livewire\Admin\Gallery\CreateGalleryComponent;
 use App\Livewire\Admin\HomeSlider\HomeSliderComponent;
 use App\Livewire\Admin\HomeSlider\EditHomeSliderComponent;
@@ -44,6 +45,8 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'),'verified',]
     Route::get('admin/home-slider', HomeSliderComponent::class)->name('home-slider');
     Route::get('admin/home-slider/edit/{id}', EditHomeSliderComponent::class)->name('home-slider.edit');
 
+    Route::get('admin/settings', SettingsComponent::class)->name('settings');
+    Route::get('admin/contacts', ContactComponenet::class)->name('contacts');
 
     Route::prefix('/admin')->group(function () {
         //  course.route
@@ -62,6 +65,8 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'),'verified',]
         Route::get('/faculty/edit/{id}', EditFacultyComponent::class)->name('faculty.edit');
     });
 
+
     Route::get('admin/settings', SettingsComponent::class)->name('settings');
+
 
 });

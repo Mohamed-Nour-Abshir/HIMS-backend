@@ -55,7 +55,7 @@
                         </div>
                     </div>
                     <div class="center">
-                        <div class="center-item">
+                        <div class="mb-0 center-item">
                             <div class="center-heading">Main Home</div>
                             <ul class="menu-list">
                                 <li class="menu-item">
@@ -81,6 +81,7 @@
                                     </a>
                                 </li>
                                 <li class="menu-item">
+
                                     <a href="{{route('admin.faculty')}}" class="@if(request()->routeIs('admin.faculty') || request()->routeIs('faculty.create') || request()->routeIs('faculty.edit')) active @endif">
                                         <div class="icon"><i class="icon-book-open"></i></div>
                                         <div class="text">Manage Faculty</div>
@@ -93,10 +94,16 @@
                                     </a>
                                 </li>
                                 <li class="menu-item">
+                                    <a href="{{route('settings')}}" class="{{ Request::is('admin/ settings') ? 'active' : '' }}">
 
-                                    <a href="{{route('settings')}}" class="{{ Request::is('admin/settings') ? 'active' : '' }}">
                                         <div class="icon"><i class="icon-settings"></i></div>
                                         <div class="text">Settings</div>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="{{route('contacts')}}" class="{{ Request::is('admin/contacts') ? 'active' : '' }}">
+                                        <div class="icon"><i class="icon-settings"></i></div>
+                                        <div class="text">Contacts</div>
                                     </a>
                                 </li>
 
