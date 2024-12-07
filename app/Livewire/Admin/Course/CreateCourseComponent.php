@@ -15,14 +15,7 @@ class CreateCourseComponent extends Component
     public $course_name, $slug, $image, $course_modules, $duration, $lectures, $hours;
     public $department, $regular_price, $discount_price, $description, $status='Active';
 
-    // protected $rules = [
 
-    // ];
-
-    // public function updated($propertyName)
-    // {
-    //     $this->validateOnly($propertyName);
-    // }
 
     public function createCourse()
     {

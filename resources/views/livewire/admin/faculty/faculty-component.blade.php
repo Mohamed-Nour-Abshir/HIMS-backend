@@ -2,7 +2,7 @@
     <div class="main-content-inner">
         <div class="main-content-wrap">
             <div class="flex flex-wrap items-center justify-between gap20 mb-27">
-                <h3>All Courses</h3>
+                <h3>All Faculties</h3>
                 <ul class="flex flex-wrap items-center justify-start breadcrumbs gap10">
                     <li>
                         <a href="{{route('dashboard')}}">
@@ -13,7 +13,7 @@
                         <i class="icon-chevron-right"></i>
                     </li>
                     <li>
-                        <div class="text-tiny">Slider</div>
+                        <div class="text-tiny">Faculties</div>
                     </li>
                 </ul>
             </div>
@@ -23,8 +23,8 @@
                     <div class="card">
                         <div class="card-header">
                             <div class="flex flex-wrap items-center justify-between gap10">
-                                <h3 class="card-title">Courses</h3>
-                                <a href="{{ route('course.create') }}" class="btn btn-primary btn-lg">
+                                <h3 class="card-title">Faculty</h3>
+                                <a href="{{ route('faculty.create') }}" class="btn btn-primary btn-lg">
                                     <i class="icon-plus"></i>
                                     <span>Add New</span>
                                 </a>
@@ -33,7 +33,7 @@
                         <div class="card-body">
                             <div class="table-responsive">
                                 @if(session()->has('message'))
-                                    <div class="text-3xl text-green-600 text-success" style="font-size: 1.5rem">
+                                    <div class="mb-3 text-3xl text-success" style="font-size: 1.5rem">
                                         {{ session()->get('message') }}
                                     </div>
                                 @endif
@@ -41,34 +41,31 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Course name</th>
                                             <th>Image</th>
-                                            <th>Department</th>
-                                            <th>Description</th>
+                                            <th>Name</th>
+                                            <th>Designation</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($courses as $key=>$course)
+                                        @foreach ($faculties as $key=>$faculty)
                                             <tr>
                                                 <td>{{ ++$key }}</td>
-
-                                                <td>{{$course?->course_name}}</td>
                                                 <td class="pname">
                                                     <div class="image">
-                                                        <img src="{{asset('assets/images/courses')}}/{{$course?->image}}" alt="" class="image" width="300">
+                                                        <img src="{{asset('assets/images/faculty')}}/{{$faculty?->image}}" alt="" class="image" width="100">
                                                     </div>
                                                 </td>
-                                                <td>{{$course?->department}}</td>
-                                                <td>{{$course?->description}}</td>
+                                                <td>{{$faculty?->name}}</td>
+                                                <td>{{$faculty?->designation}}</td>
                                                 <td>
                                                     <div class="list-icon-function">
-                                                        <a href="{{route('course.edit', $course->id)}}">
+                                                        <a href="{{ route('faculty.edit', $faculty->id) }}">
                                                             <div class="item edit">
                                                                 <i class="icon-edit"></i>
                                                             </div>
                                                         </a>
-                                                        <a href="javascript:void(0)" wire:click.prevent="deleteCourse({{$course->id}})">
+                                                        <a href="javascript:void(0)" wire:click.prevent="deleteFaculty({{$faculty->id}})">
                                                             <div class="item trash">
                                                                 <i class="icon-trash"></i>
                                                             </div>

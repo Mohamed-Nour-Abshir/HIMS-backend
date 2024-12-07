@@ -76,12 +76,26 @@
                                 </li>
                                 <li class="menu-item">
                                     <a href="{{route('admin.course')}}" class="@if(request()->routeIs('admin.course') || request()->routeIs('course.create') || request()->routeIs('course.edit')) active @endif">
-                                        <div class="icon"><i class="icon-home"></i></div>
+                                        <div class="icon"><i class="icon-book-open"></i></div>
                                         <div class="text">Manage Course</div>
                                     </a>
                                 </li>
                                 <li class="menu-item">
                                     <a href="{{route('settings')}}" class="{{ Request::is('admin/ settings') ? 'active' : '' }}">
+                                    <a href="{{route('admin.faculty')}}" class="@if(request()->routeIs('admin.faculty') || request()->routeIs('faculty.create') || request()->routeIs('faculty.edit')) active @endif">
+                                        <div class="icon"><i class="icon-book-open"></i></div>
+                                        <div class="text">Manage Faculty</div>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="{{route('admin.gallery')}}" class="@if(request()->routeIs('admin.gallery') || request()->routeIs('gallery.create') || request()->routeIs('gallery.edit')) active @endif">
+                                        <div class="icon"><i class="icon-book-open"></i></div>
+                                        <div class="text">Manage Galllery</div>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+
+                                    <a href="{{route('settings')}}" class="{{ Request::is('admin/settings') ? 'active' : '' }}">
                                         <div class="icon"><i class="icon-settings"></i></div>
                                         <div class="text">Settings</div>
                                     </a>
