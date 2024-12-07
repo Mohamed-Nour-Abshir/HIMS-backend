@@ -27,7 +27,10 @@ use App\Livewire\Admin\Gallery\EditGalleryComponent;
 use App\Livewire\Admin\Gallery\CreateGalleryComponent;
 use App\Livewire\Admin\HomeSlider\HomeSliderComponent;
 use App\Livewire\Admin\HomeSlider\EditHomeSliderComponent;
-
+use App\Livewire\Admin\Partner\CreatePartnerComponent;
+use App\Livewire\Admin\Partner\EditPartnerComponent;
+use App\Livewire\Admin\Partner\PartnerComponent;
+use App\Models\Partner;
 
 Route::get('/', HomeComponent::class);
 Route::get('/mission-vision', MissionVisionComponent::class)->name('mission');
@@ -67,6 +70,9 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'),'verified',]
     });
 
     Route::get('admin/admissions', AdmissionApplationsComponent::class)->name('admin.admissions');
+    Route::get('admin/partners', PartnerComponent::class)->name('partners');
+    Route::get('admin/partners/create', CreatePartnerComponent::class)->name('partner.create');
+    Route::get('admin/partners/edit/{id}', EditPartnerComponent::class)->name('partner.edit');
     Route::get('admin/settings', SettingsComponent::class)->name('settings');
 
 });

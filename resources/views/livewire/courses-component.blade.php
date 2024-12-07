@@ -48,7 +48,7 @@
                         <div class="p-3 mt-3 text-center text-white content bg-info">
                             <h4 class="mb-0"><a href="course-details.html" class="text-white">{{ $course->course_name }}</a></h4>
                             <p class="mb-0">{{ $course->department }}</p>
-                            <small><a href="course-details.html" class="text-white">more details | Enroll now</a></small>
+                            <small><a href="{{route('apply')}}" class="text-white">more details | Enroll now</a></small>
                         </div>
                     </div>
                 </div>

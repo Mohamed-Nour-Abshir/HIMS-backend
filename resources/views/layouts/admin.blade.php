@@ -99,17 +99,25 @@
                                         <div class="text">Manage Galllery</div>
                                     </a>
                                 </li>
+                                
+                                <li class="menu-item">
+                                    <a href="{{route('contacts')}}" class="{{ Request::is('admin/contacts') ? 'active' : '' }}">
+                                        <div class="icon"><i class="icon-users"></i></div>
+                                        <div class="text">Contacts</div>
+                                    </a>
+                                </li>
+                                
+                                <li class="menu-item">
+                                    <a href="{{route('partners')}}" class="{{ Request::is('admin/partners') ? 'active' : '' }}">
+                                        <div class="icon"><i class="icon-user"></i></div>
+                                        <div class="text">Partners</div>
+                                    </a>
+                                </li>
                                 <li class="menu-item">
 
                                     <a href="{{route('settings')}}" class="{{ Request::is('admin/settings') ? 'active' : '' }}">
                                         <div class="icon"><i class="icon-settings"></i></div>
                                         <div class="text">Settings</div>
-                                    </a>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="{{route('contacts')}}" class="{{ Request::is('admin/contacts') ? 'active' : '' }}">
-                                        <div class="icon"><i class="icon-users"></i></div>
-                                        <div class="text">Contacts</div>
                                     </a>
                                 </li>
 

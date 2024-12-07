@@ -92,7 +92,7 @@
 						<h2 class="title-color">Why Choose HIMS for Medical Training in Bangladesh</h2>
 						<p class="mt-4 mb-5">Heartbeat institute of medical science (HIMS) as a pioneer Institute for providing to improve the skills of medical student, Nutritionist, Pharmacist & Health Service Professionals. We work for building a diverse and inclusive medical community that sets the standard for educating to be leaders in creating a healthier, better world to enrich learning, foster innovation, and help to tackle the most vexing challenges in health care.</p>
 
-						<a href="" class="btn btn-main-2 btn-round-full btn-icon">Read more about us<i class="ml-3 icofont-simple-right"></i></a>
+						<a href="{{route('mission')}}" class="btn btn-main-2 btn-round-full btn-icon">Read more about us<i class="ml-3 icofont-simple-right"></i></a>
 					</div>
 				</div>
 			</div>
@@ -388,56 +388,15 @@
 
 		<div class="container">
 			<div class="row clients-logo">
-				<div class="col-lg-2">
-					<div class="client-thumb">
-						<img src="images/about/1.png" alt="" class="img-fluid">
+				@foreach ($partners as $partner)
+					<div class="col-lg-2">
+						<div class="client-thumb">
+							<img src="{{asset('assets/images/partners')}}/{{$partner->image}}" alt="{{$partner->alt}}" class="img-fluid">
+						</div>
 					</div>
-				</div>
-				<div class="col-lg-2">
-					<div class="client-thumb">
-						<img src="images/about/2.png" alt="" class="img-fluid">
-					</div>
-				</div>
-				<div class="col-lg-2">
-					<div class="client-thumb">
-						<img src="images/about/3.png" alt="" class="img-fluid">
-					</div>
-				</div>
-				<div class="col-lg-2">
-					<div class="client-thumb">
-						<img src="images/about/4.png" alt="" class="img-fluid">
-					</div>
-				</div>
-				<div class="col-lg-2">
-					<div class="client-thumb">
-						<img src="images/about/5.png" alt="" class="img-fluid">
-					</div>
-				</div>
-				<div class="col-lg-2">
-					<div class="client-thumb">
-						<img src="images/about/6.png" alt="" class="img-fluid">
-					</div>
-				</div>
-				<div class="col-lg-2">
-					<div class="client-thumb">
-						<img src="images/about/3.png" alt="" class="img-fluid">
-					</div>
-				</div>
-				<div class="col-lg-2">
-					<div class="client-thumb">
-						<img src="images/about/4.png" alt="" class="img-fluid">
-					</div>
-				</div>
-				<div class="col-lg-2">
-					<div class="client-thumb">
-						<img src="images/about/5.png" alt="" class="img-fluid">
-					</div>
-				</div>
-				<div class="col-lg-2">
-					<div class="client-thumb">
-						<img src="images/about/6.png" alt="" class="img-fluid">
-					</div>
-				</div>
+				@endforeach
+				
+
 			</div>
 		</div>
 	</section>

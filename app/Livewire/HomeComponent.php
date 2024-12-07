@@ -8,6 +8,7 @@ use App\Models\Faculty;
 use App\Models\Setting;
 use Livewire\Component;
 use App\Models\HomeSlider;
+use App\Models\Partner;
 
 class HomeComponent extends Component
 {
@@ -71,7 +72,8 @@ class HomeComponent extends Component
         return view('livewire.home-component', [
             "slider" => HomeSlider::find(1),
             "settings" => Setting::find(1),
-            "courses" => Course::all()
+            "courses" => Course::all(),
+            "partners" => Partner::all()
         ])->layout('layouts.base');
     }
 }
