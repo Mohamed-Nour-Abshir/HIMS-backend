@@ -4,9 +4,12 @@ namespace App\Livewire\Admin\News;
 
 use Livewire\Component;
 use Illuminate\Support\Str;
+use Livewire\WithFileUploads;
 
 class EditNewsComponent extends Component
 {
+    use WithFileUploads;
+
     public $title, $description, $news_id, $image, $old_image;
 
     public function mount($id)
@@ -24,7 +27,7 @@ class EditNewsComponent extends Component
             $this->validate([
                 'title' => 'required|string|max:255',
                 'description' => 'required|string',
-                'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:10000',
+                'image' => 'nullable|image|mimes:jpeg,webp,png,jpg,gif,svg|max:10000',
             ]);
 
             $news = \App\Models\News::find($this->news_id);

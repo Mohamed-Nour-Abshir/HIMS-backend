@@ -9,6 +9,7 @@ use App\Livewire\AffiliateComponent;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\ApplyCourseComponent;
 use App\Livewire\NoticeBoardComponent;
+use App\Livewire\NoticeDetailsComponent;
 use App\Livewire\AdmissionFeesComponent;
 use App\Livewire\MissionVisionComponent;
 use App\Livewire\ManagementTeamComponent;
@@ -18,10 +19,13 @@ use App\Livewire\Admin\Faculty\FacultyComponent;
 use App\Livewire\Admin\Gallery\GalleryComponent;
 use App\Livewire\Admin\Contact\ContactComponenet;
 use App\Livewire\Admin\Course\EditCourseComponent;
+use App\Livewire\Admin\Notice\EditNoticeComponent;
 use App\Livewire\Admin\Settings\SettingsComponent;
+use App\Livewire\Admin\Notice\IndexNoticeComponent;
 use App\Livewire\Admin\Course\CreateCourseComponent;
 use App\Livewire\Admin\Faculty\EditFacultyComponent;
 use App\Livewire\Admin\Gallery\EditGalleryComponent;
+use App\Livewire\Admin\Notice\CreateNoticeComponent;
 use App\Livewire\Admin\Faculty\CreateFacultyComponent;
 use App\Livewire\Admin\Gallery\CreateGalleryComponent;
 use App\Livewire\Admin\HomeSlider\HomeSliderComponent;
@@ -31,6 +35,7 @@ Route::get('/', HomeComponent::class);
 Route::get('/mission-vision', MissionVisionComponent::class)->name('mission');
 Route::get('/management-team', ManagementTeamComponent::class)->name('management-team');
 Route::get('/notice-board', NoticeBoardComponent::class)->name('notice');
+Route::get('/notice-details/{slug}', NoticeDetailsComponent::class)->name('notice.details');
 Route::get('/news', App\Livewire\NewsComponent::class)->name('news');
 Route::get('/news-details/{slug}', App\Livewire\NewsDetailsComponent::class)->name('news.details');
 Route::get('/affiliate', AffiliateComponent::class)->name('affiliate');
@@ -69,6 +74,11 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'),'verified',]
         Route::get('/news', App\Livewire\Admin\News\NewsComponent::class)->name('admin.news');
         Route::get('/news/create', App\Livewire\Admin\News\CreateNewsComponent::class)->name('news.create');
         Route::get('/news/edit/{id}', App\Livewire\Admin\News\EditNewsComponent::class)->name('news.edit');
+
+        //  notice.route
+        Route::get('/notice', IndexNoticeComponent::class)->name('admin.notice');
+        Route::get('/notice/create', CreateNoticeComponent::class)->name('notice.create');
+        Route::get('/notice/edit/{id}', EditNoticeComponent::class)->name('notice.edit');
 
         //  mission.vision.route
         Route::get('/mission-vision', App\Livewire\Admin\Mission\MissionVisionComponent::class)->name('mission.vision');

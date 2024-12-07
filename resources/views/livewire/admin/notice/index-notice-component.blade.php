@@ -2,7 +2,7 @@
     <div class="main-content-inner">
         <div class="main-content-wrap">
             <div class="flex flex-wrap items-center justify-between gap20 mb-27">
-                <h3>All News</h3>
+                <h3>All Notices</h3>
                 <ul class="flex flex-wrap items-center justify-start breadcrumbs gap10">
                     <li>
                         <a href="{{route('dashboard')}}">
@@ -13,7 +13,7 @@
                         <i class="icon-chevron-right"></i>
                     </li>
                     <li>
-                        <div class="text-tiny">News</div>
+                        <div class="text-tiny">Notice</div>
                     </li>
                 </ul>
             </div>
@@ -23,8 +23,8 @@
                     <div class="card">
                         <div class="card-header">
                             <div class="flex flex-wrap items-center justify-between gap10">
-                                <h3 class="card-title">News</h3>
-                                <a href="{{ route('news.create') }}" class="btn btn-primary btn-lg">
+                                <h3 class="card-title">Notice</h3>
+                                <a href="{{ route('notice.create') }}" class="btn btn-primary btn-lg">
                                     <i class="icon-plus"></i>
                                     <span>Add New</span>
                                 </a>
@@ -48,24 +48,24 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($newses as $key=>$news)
+                                        @foreach ($notices as $key=>$notice)
                                             <tr>
                                                 <td>{{ ++$key }}</td>
                                                 <td class="pname">
                                                     <div class="image">
-                                                        <img src="{{asset('assets/images/news')}}/{{$news?->image}}" alt="" class="image" width="100">
+                                                        <img src="{{asset('assets/images/notice')}}/{{$notice?->image}}" alt="" class="image" width="100">
                                                     </div>
                                                 </td>
-                                                <td>{{$news?->title}}</td>
-                                                <td>{!! Str::limit($news?->description, 50, '...') !!}</td>
+                                                <td>{{$notice?->title}}</td>
+                                                <td>{!! Str::limit($notice?->description, 50, '...') !!}</td>
                                                 <td>
                                                     <div class="list-icon-function">
-                                                        <a href="{{ route('news.edit', $news->id) }}">
+                                                        <a href="{{ route('notice.edit', $notice->id) }}">
                                                             <div class="item edit">
                                                                 <i class="icon-edit"></i>
                                                             </div>
                                                         </a>
-                                                        <a href="javascript:void(0)" wire:click.prevent="destroyNews({{$news->id}})">
+                                                        <a href="javascript:void(0)" wire:click.prevent="destroyNotice({{$notice->id}})">
                                                             <div class="item trash">
                                                                 <i class="icon-trash"></i>
                                                             </div>
