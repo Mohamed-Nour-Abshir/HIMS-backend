@@ -89,6 +89,13 @@
                                 </li>
 
                                 <li class="menu-item">
+                                    <a href="{{route('admin.feedback')}}" class="@if(request()->routeIs('admin.feedback') || request()->routeIs('feedback.create') || request()->routeIs('feedback.edit')) active @endif">
+                                        <div class="icon"><i class="icon-book-open"></i></div>
+                                        <div class="text">Manage Feedback</div>
+                                    </a>
+                                </li>
+
+                                <li class="menu-item">
                                     <a href="{{route('admin.news')}}" class="@if(request()->routeIs('admin.news') || request()->routeIs('news.create') || request()->routeIs('news.edit')) active @endif">
                                         <div class="icon"><i class="icon-book-open"></i></div>
                                         <div class="text">Manage News</div>

@@ -16,7 +16,8 @@ class HomeComponent extends Component
         return view('livewire.home-component', [
             "slider" => HomeSlider::find(1),
             "settings" => Setting::find(1),
-            "courses" => Course::all()
+            "courses" => Course::all(),
+            'feedbacks' => \App\Models\ClientFeedback::all(),
         ])->layout('layouts.base');
     }
 }
