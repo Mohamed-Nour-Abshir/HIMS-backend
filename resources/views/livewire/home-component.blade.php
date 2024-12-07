@@ -78,13 +78,13 @@
 			<div class="row align-items-center">
 				<div class="col-lg-4 col-sm-6">
 					<div class="about-img">
-						<img src="images/about/img-1.jpg" alt="" class="img-fluid">
-						<img src="images/about/img-2.jpg" alt="" class="mt-4 img-fluid">
+						<img src="{{asset('assets/images/about/img-1.jpg')}}" alt="" class="img-fluid">
+						<img src="{{asset('assets/images/about/img-2.jpg')}}" alt="" class="mt-4 img-fluid">
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-6">
 					<div class="mt-4 about-img mt-lg-0">
-						<img src="images/about/img-3.jpg" alt="" class="img-fluid">
+						<img src="{{asset('assets/images/about/img-3.jpg')}}" alt="" class="img-fluid">
 					</div>
 				</div>
 				<div class="col-lg-4">
@@ -175,7 +175,7 @@
 			<div class="row align-items-center">
 				<div class="col-lg-6 ">
 					<div class="appoinment-content">
-						<img src="images/about/img-3.jpg" alt="" class="img-fluid">
+						<img src="{{asset('assets/images/about/img-3.jpg')}}" alt="" class="img-fluid">
 						<div class="emergency">
 							<h2 class="text-lg"><i class="text-lg icofont-phone-circle"></i>0 1730-191922</h2>
 						</div>
@@ -183,71 +183,92 @@
 				</div>
 				<div class="col-lg-6 col-md-10 ">
 					<div class="mt-5 appoinment-wrap mt-lg-0">
-						<h2 class="mb-2 title-color">Make Admission</h2>
-						<p class="mb-4">Mollitia dicta commodi est recusandae iste, natus eum asperiores corrupti qui velit . Iste dolorum atque similique praesentium soluta.</p>
-						<form id="admission-form" class="appoinment-form" method="post" action="/submit-admission">
-
-
+						<h2 class="mb-2 title-color">Make Your Admission Today</h2>
+						<p class="mb-4">Join our institution to unlock a world of opportunities! Start your academic journey by enrolling in one of our prestigious programs. Take the first step towards achieving your dreams and building a brighter future with us.</p>						
+						
+						<form id="admission-form" class="appoinment-form" wire:submit.prevent='applyNow'>
+							<div class="row">
+								<div class="col-12">
+									@if(Session::has('message'))
+										<div class="alert alert-success contact__msg" role="alert">
+											{{Session::get('message')}}
+										</div>
+									@endif
+								</div>
+							</div>
 							<div class="row">
 								<!-- Course Selection -->
 								<div class="col-lg-6">
 									<div class="form-group">
-										<select class="form-control" name="course" required>
+										<label for="">Course</label>
+										<select class="form-control" wire:model='course_name'>
 											<option value="" disabled selected>Choose Course</option>
-											<option value="basic-first-aid">Basic First Aid</option>
-											<option value="diploma-nursing">Diploma in Nursing</option>
-											<option value="pharmacy-technician">Pharmacy Technician</option>
-											<option value="medical-laboratory">Medical Laboratory Technology</option>
+											@foreach ($courses as $course)
+												<option value="{{$course->course_name}}">{{$course->course_name}}</option>
+											@endforeach
+											
 										</select>
+										@error('course_name') <span class="text-danger">{{$message}}</span> @enderror
 									</div>
 								</div>
 
 								<!-- Full Name -->
 								<div class="col-lg-6">
 									<div class="form-group">
-										<input name="full_name" type="text" class="form-control" placeholder="Full Name" required>
+										<label for="">Full Name</label>
+										<input wire:model="full_name" type="text" class="form-control" placeholder="Full Name">
+										@error('full_name') <span class="text-danger">{{$message}}</span> @enderror
 									</div>
 								</div>
 
 								<!-- Date of Birth -->
 								<div class="col-lg-6">
 									<div class="form-group">
-										<input name="dob" type="date" class="form-control" placeholder="Date of Birth" required>
+										<label for="">Date of Birth</label>
+										<input wire:model="dob" type="date" class="form-control" placeholder="Date of Birth">
+										@error('dob') <span class="text-danger">{{$message}}</span> @enderror
 									</div>
 								</div>
 
 								<!-- Email -->
 								<div class="col-lg-6">
 									<div class="form-group">
-										<input name="email" type="email" class="form-control" placeholder="Email Address" required>
+										<label for="">Email address</label>
+										<input wire:model="email" type="email" class="form-control" placeholder="Email Address">
+										@error('email') <span class="text-danger">{{$message}}</span> @enderror
 									</div>
 								</div>
 
 								<!-- Phone -->
 								<div class="col-lg-6">
 									<div class="form-group">
-										<input name="phone" type="text" class="form-control" placeholder="Phone Number" required>
+										<label for="">Phone number</label>
+										<input wire:model="phone" type="text" class="form-control" placeholder="Phone Number">
+										@error('phone') <span class="text-danger">{{$message}}</span> @enderror
 									</div>
 								</div>
 
 								<!-- Address -->
 								<div class="col-lg-6">
 									<div class="form-group">
-										<input name="address" type="text" class="form-control" placeholder="Address" required>
+										<label for="">Present address</label>
+										<input wire:model="address" type="text" class="form-control" placeholder="Address">
+										@error('address') <span class="text-danger">{{$message}}</span> @enderror
 									</div>
 								</div>
 
 								<!-- Message (Optional) -->
 								<div class="col-lg-12">
 									<div class="form-group">
-										<textarea name="message" class="form-control" rows="4" placeholder="Additional Information (Optional)"></textarea>
+										<label for="">Additional Information</label>
+										<textarea wire:model="additional_info" class="form-control" rows="4" placeholder="Additional Information (Optional)"></textarea>
 									</div>
 								</div>
 							</div>
 
 							<!-- Submit Button -->
 							<div class="form-group">
-								<a class="btn btn-main btn-round-full" href="">Submit Application<i class="ml-2 icofont-simple-right"></i></a>
+								<button class="btn btn-main btn-round-full">Submit Application<i class="ml-2 icofont-simple-right"></i></button>
 							</div>
 						</form>
 				</div>

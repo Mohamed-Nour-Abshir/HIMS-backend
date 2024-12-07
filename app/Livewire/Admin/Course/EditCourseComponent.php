@@ -77,7 +77,7 @@ class EditCourseComponent extends Component
 
 
             session()->flash('message', 'Course updated successfully!');
-            
+            return redirect()->route('admin.course');
 
         } catch (\Exception $e) {
             session()->flash('error', 'Error: ' . $e->getMessage());

@@ -41,6 +41,7 @@ class CreateGalleryComponent extends Component
 
         $this->reset(['image_alt', 'image']);
         session()->flash('message', 'Gallery Created Successfully');
+        return redirect()->route('admin.gallery');
     }
 
     //  render.view

@@ -38,6 +38,7 @@ class EditGalleryComponent extends Component
         $gallery->save();
         
         session()->flash('message', 'Gallery Updated Successfully');
+        return redirect()->route('admin.gallery');
     }
 
     public function render()

@@ -26,16 +26,16 @@
                     <div class="col-12 text-center  mb-5">
                         <div class="btn-group btn-group-toggle " data-toggle="buttons">
                             <label class="btn active">
-                                <a href="courses.html#tuition-fees" class="text-white" type="radio" name="shuffle-filter" value="fees" checked="checked">Tuition Feess </a>
+                                <a href="{{route('courses')}}" class="text-white" type="radio" name="shuffle-filter" value="fees" checked="checked">Tuition Feess </a>
                             </label>
                             <label class="btn active">
-                                <a href="courses.html#scholarships" class="text-white" type="radio" name="shuffle-filter" value="scholarship" checked="checked">Scholarships </a>
+                                <a href="{{route('courses')}}" class="text-white" type="radio" name="shuffle-filter" value="scholarship" checked="checked">Scholarships </a>
                             </label>
                             <label class="btn active">
-                                <a href="courses.html#courses" class="text-white" type="radio" name="shuffle-filter" value="courses" checked="checked">Our Courses </a>
+                                <a href="{{route('courses')}}" class="text-white" type="radio" name="shuffle-filter" value="courses" checked="checked">Our Courses </a>
                             </label>
                             <label class="btn active">
-                                <a href="courses.html#apply-now" class="text-white" type="radio" name="shuffle-filter" value="apply" checked="checked">Apply Now </a>
+                                <a href="{{route('courses')}}" class="text-white" type="radio" name="shuffle-filter" value="apply" checked="checked">Apply Now </a>
                             </label>
                         </div>
                     </div>
@@ -48,18 +48,18 @@
                     <p>Heartbeat Institute of Medical Sciences (HIMS) as a pioneer Institute for providing to improve the skills of medical student, Nutritionist, Pharmacist & Health Service Professionals. We work for building a diverse and inclusive medical community that sets the standard for educating to be leaders in creating a healthier, better world to enrich learning, foster innovation, and help to tackle the most vexing challenges in health care.</p>
                     <div class="row">
                         <div class="col-md-6">
-                            <p> <img src="images/check-circle1.svg" alt="" class="mr-2"><b>Flexible Learning: </b>  With a mix of in-person and online learning options, we offer flexible schedules to accommodate the busy lives of healthcare professionals.</p>
+                            <p> <img src="{{asset('assets/images/check-circle1.svg')}}" alt="" class="mr-2"><b>Flexible Learning: </b>  With a mix of in-person and online learning options, we offer flexible schedules to accommodate the busy lives of healthcare professionals.</p>
                         </div>
                         <div class="col-md-6">
-                            <p> <img src="images/check-circle1.svg" alt="" class="mr-2"><b>State-of-the-Art Facilities: </b>   Equipped with modern technology, our labs and training centers provide students with the best environment to practice and refine their skills.</p>
+                            <p> <img src="{{asset('assets/images/check-circle1.svg')}}" alt="" class="mr-2"><b>State-of-the-Art Facilities: </b>   Equipped with modern technology, our labs and training centers provide students with the best environment to practice and refine their skills.</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <p> <img src="images/check-circle1.svg" alt="" class="mr-2"><b>Global Networking Opportunities: </b>  Our programs are accredited by relevant medical councils and respected by institutions worldwide.</p>
+                            <p> <img src="{{asset('assets/images/check-circle1.svg')}}" alt="" class="mr-2"><b>Global Networking Opportunities: </b>  Our programs are accredited by relevant medical councils and respected by institutions worldwide.</p>
                         </div>
                         <div class="col-md-6">
-                            <p> <img src="images/check-circle1.svg" alt="" class="mr-2"><b>Expert Faculty:  </b>  Our programs are taught by leading medical experts and experienced practitioners who bring real-world insights into the classroom.</p>
+                            <p> <img src="{{asset('assets/images/check-circle1.svg')}}" alt="" class="mr-2"><b>Expert Faculty:  </b>  Our programs are taught by leading medical experts and experienced practitioners who bring real-world insights into the classroom.</p>
                         </div>
                     </div>
 				</div>

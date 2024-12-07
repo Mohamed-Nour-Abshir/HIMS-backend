@@ -45,6 +45,7 @@ class CreateFacultyComponent extends Component
         $this->reset(['name','designation','image']);
 
         session()->flash('success','Faculty Created Successfully');
+        return redirect()->route('admin.faculty');
     }
 
     //  render.view

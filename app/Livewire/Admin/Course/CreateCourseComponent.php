@@ -58,6 +58,7 @@ class CreateCourseComponent extends Component
 
             $this->resetExcept('status');
             session()->flash('message', 'Course created successfully!');
+            return redirect()->route('admin.course');
         } catch (\Exception $e) {
             session()->flash('error', 'Error: ' . $e->getMessage());
         }

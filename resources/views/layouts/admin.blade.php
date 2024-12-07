@@ -69,6 +69,12 @@
                         <div class="center-item">
                             <ul class="menu-list">
                                 <li class="menu-item">
+                                    <a href="{{route('admin.admissions')}}" class="{{ Request::is('admin/admissions') ? 'active' : '' }} {{ Request::is('admin/home-slider/edit/1') ? 'active' : '' }}">
+                                        <div class="icon"><i class="icon-users"></i></div>
+                                        <div class="text">Admissions</div>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
                                     <a href="{{route('home-slider')}}" class="{{ Request::is('admin/home-slider') ? 'active' : '' }} {{ Request::is('admin/home-slider/edit/1') ? 'active' : '' }}">
                                         <div class="icon"><i class="icon-home"></i></div>
                                         <div class="text">Home Slider</div>
@@ -102,7 +108,7 @@
                                 </li>
                                 <li class="menu-item">
                                     <a href="{{route('contacts')}}" class="{{ Request::is('admin/contacts') ? 'active' : '' }}">
-                                        <div class="icon"><i class="icon-settings"></i></div>
+                                        <div class="icon"><i class="icon-users"></i></div>
                                         <div class="text">Contacts</div>
                                     </a>
                                 </li>

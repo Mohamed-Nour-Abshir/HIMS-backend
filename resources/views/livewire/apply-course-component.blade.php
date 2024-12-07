@@ -37,69 +37,89 @@
                 <h2 class="mb-2 title-color">Apply for Admission</h2>
                 <p class="mb-4">Start your journey with us today! Join our vibrant community of learners and take the first step toward achieving your educational goals. Explore our programs, apply now, and unlock your potential.</p>
                 
-                <form id="admission-form" class="appoinment-form" method="post" action="/submit-admission">
-                    
-                
+                <form id="admission-form" class="appoinment-form" wire:submit.prevent='applyNow'>
+                    <div class="row">
+                        <div class="col-12">
+                            @if(Session::has('message'))
+                                <div class="alert alert-success contact__msg" role="alert">
+                                    {{Session::get('message')}}
+                                </div>
+                            @endif
+                        </div>
+                    </div>
                     <div class="row">
                         <!-- Course Selection -->
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <select class="form-control" name="course" required>
+                                <label for="">Course</label>
+                                <select class="form-control" wire:model='course_name'>
                                     <option value="" disabled selected>Choose Course</option>
-                                    <option value="basic-first-aid">Basic First Aid</option>
-                                    <option value="diploma-nursing">Diploma in Nursing</option>
-                                    <option value="pharmacy-technician">Pharmacy Technician</option>
-                                    <option value="medical-laboratory">Medical Laboratory Technology</option>
+                                    @foreach ($courses as $course)
+                                        <option value="{{$course->course_name}}">{{$course->course_name}}</option>
+                                    @endforeach
+                                    
                                 </select>
+                                @error('course_name') <span class="text-danger">{{$message}}</span> @enderror
                             </div>
                         </div>
-                        
+
                         <!-- Full Name -->
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <input name="full_name" type="text" class="form-control" placeholder="Full Name" required>
+                                <label for="">Full Name</label>
+                                <input wire:model="full_name" type="text" class="form-control" placeholder="Full Name">
+                                @error('full_name') <span class="text-danger">{{$message}}</span> @enderror
                             </div>
                         </div>
-                
+
                         <!-- Date of Birth -->
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <input name="dob" type="date" class="form-control" placeholder="Date of Birth" required>
+                                <label for="">Date of Birth</label>
+                                <input wire:model="dob" type="date" class="form-control" placeholder="Date of Birth">
+                                @error('dob') <span class="text-danger">{{$message}}</span> @enderror
                             </div>
                         </div>
-                
+
                         <!-- Email -->
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <input name="email" type="email" class="form-control" placeholder="Email Address" required>
+                                <label for="">Email address</label>
+                                <input wire:model="email" type="email" class="form-control" placeholder="Email Address">
+                                @error('email') <span class="text-danger">{{$message}}</span> @enderror
                             </div>
                         </div>
-                
+
                         <!-- Phone -->
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <input name="phone" type="text" class="form-control" placeholder="Phone Number" required>
+                                <label for="">Phone number</label>
+                                <input wire:model="phone" type="text" class="form-control" placeholder="Phone Number">
+                                @error('phone') <span class="text-danger">{{$message}}</span> @enderror
                             </div>
                         </div>
-                
+
                         <!-- Address -->
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <input name="address" type="text" class="form-control" placeholder="Address" required>
+                                <label for="">Present address</label>
+                                <input wire:model="address" type="text" class="form-control" placeholder="Address">
+                                @error('address') <span class="text-danger">{{$message}}</span> @enderror
                             </div>
                         </div>
-                
+
                         <!-- Message (Optional) -->
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <textarea name="message" class="form-control" rows="4" placeholder="Additional Information (Optional)"></textarea>
+                                <label for="">Additional Information</label>
+                                <textarea wire:model="additional_info" class="form-control" rows="4" placeholder="Additional Information (Optional)"></textarea>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Submit Button -->
                     <div class="form-group">
-                        <a class="btn btn-main btn-round-full" href="">Submit Application<i class="icofont-simple-right ml-2"></i></a>
+                        <button class="btn btn-main btn-round-full">Submit Application<i class="ml-2 icofont-simple-right"></i></button>
                     </div>
                 </form>
                 

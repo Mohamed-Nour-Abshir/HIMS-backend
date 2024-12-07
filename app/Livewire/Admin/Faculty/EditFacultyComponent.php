@@ -60,6 +60,7 @@ class EditFacultyComponent extends Component
         $faculty->update();
 
         session()->flash('message','Faculty Updated Successfully');
+        return redirect()->route('admin.faculty');
     }
 
     public function render()

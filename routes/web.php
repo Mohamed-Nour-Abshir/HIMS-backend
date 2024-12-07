@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Admin\Admissions\AdmissionApplationsComponent;
 use App\Livewire\Admin\Contact\ContactComponenet;
 use App\Livewire\HomeComponent;
 use App\Livewire\NewsComponent;
@@ -65,7 +66,7 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'),'verified',]
         Route::get('/faculty/edit/{id}', EditFacultyComponent::class)->name('faculty.edit');
     });
 
-
+    Route::get('admin/admissions', AdmissionApplationsComponent::class)->name('admin.admissions');
     Route::get('admin/settings', SettingsComponent::class)->name('settings');
 
 });

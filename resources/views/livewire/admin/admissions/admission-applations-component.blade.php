@@ -3,7 +3,7 @@
         <div class="main-content-inner">
             <div class="main-content-wrap">
                 <div class="flex flex-wrap items-center justify-between gap20 mb-27">
-                    <h3>Contacts</h3>
+                    <h3>Admissions</h3>
                     <ul class="flex flex-wrap items-center justify-start breadcrumbs gap10">
                         <li>
                             <a href="{{route('dashboard')}}">
@@ -14,7 +14,7 @@
                             <i class="icon-chevron-right"></i>
                         </li>
                         <li>
-                            <div class="text-tiny">Contacts</div>
+                            <div class="text-tiny">Admissions</div>
                         </li>
                     </ul>
                 </div>
@@ -26,11 +26,13 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Name</th>
+                                        <th>Full Name</th>
                                         <th>Email</th>
-                                        <th>Phone</th>
-                                        <th>Subject</th>
-                                        <th>Message</th>
+                                        <th>Phone No</th>
+                                        <th>Address</th>
+                                        <th>Date of birth</th>
+                                        <th>Course Name</th>
+                                        <th>Addtional info</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -38,16 +40,18 @@
                                     @php
                                         $i = 0;
                                     @endphp
-                                    @foreach ($contacts as $contact)
+                                    @foreach ($admissions as $admission)
                                         <tr>
                                             <td>{{++$i}}</td>
-                                            <td>{{$contact->name}}</td>
-                                            <td>{{$contact->email}}</td>
-                                            <td>{{$contact->phone}}</td>
-                                            <td>{{$contact->subject}}</td>
-                                            <td>{{$contact->message}}</td>
+                                            <td>{{$admission->full_name}}</td>
+                                            <td>{{$admission->email}}</td>
+                                            <td>{{$admission->phone}}</td>
+                                            <td>{{$admission->address}}</td>
+                                            <td>{{$admission->dob}}</td>
+                                            <td>{{$admission->course_name}}</td>
+                                            <td>{{$admission->additional_info}}</td>
                                             <td>
-                                                <a href="#" onclick="confirm('Are you sure to Delete this contact?') || event.stopImmediatePropagation()" wire:click.prevent="deleteContact({{$contact->id}})">
+                                                <a href="#" onclick="confirm('Are you sure to Delete this admission?') || event.stopImmediatePropagation()" wire:click.prevent="deleteAdmission({{$admission->id}})">
                                                     <div class="item edit">
                                                         <i class="icon-trash text-danger fw-bolder"></i>
                                                     </div>
