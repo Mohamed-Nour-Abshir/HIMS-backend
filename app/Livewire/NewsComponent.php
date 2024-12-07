@@ -8,6 +8,9 @@ class NewsComponent extends Component
 {
     public function render()
     {
-        return view('livewire.news-component')->layout('layouts.base');
+        return view('livewire.news-component',
+        [
+            'newses' => \App\Models\News::all(),
+        ])->layout('layouts.base');
     }
 }

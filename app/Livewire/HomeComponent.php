@@ -73,7 +73,8 @@ class HomeComponent extends Component
             "slider" => HomeSlider::find(1),
             "settings" => Setting::find(1),
             "courses" => Course::all(),
-            "partners" => Partner::all()
+            "partners" => Partner::all(),
+            'feedbacks' => \App\Models\ClientFeedback::all(),
         ])->layout('layouts.base');
     }
 }

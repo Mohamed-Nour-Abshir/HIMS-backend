@@ -8,6 +8,8 @@ class NoticeBoardComponent extends Component
 {
     public function render()
     {
-        return view('livewire.notice-board-component')->layout('layouts.base');
+        return view('livewire.notice-board-component',[
+            'notices' => \App\Models\Notice::all(),
+        ])->layout('layouts.base');
     }
 }

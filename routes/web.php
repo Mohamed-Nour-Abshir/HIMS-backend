@@ -1,7 +1,7 @@
 <?php
 
+
 use App\Livewire\Admin\Admissions\AdmissionApplationsComponent;
-use App\Livewire\Admin\Contact\ContactComponenet;
 use App\Livewire\HomeComponent;
 use App\Livewire\NewsComponent;
 use App\Livewire\ContactComponent;
@@ -13,30 +13,43 @@ use App\Livewire\ApplyCourseComponent;
 use App\Livewire\NoticeBoardComponent;
 use App\Livewire\AdmissionFeesComponent;
 use App\Livewire\MissionVisionComponent;
+use App\Livewire\NoticeDetailsComponent;
 use App\Livewire\ManagementTeamComponent;
 use App\Livewire\Admin\DashboardComponent;
 use App\Livewire\Admin\Course\CourseComponent;
-use App\Livewire\Admin\Gallery\GalleryComponent;
-use App\Livewire\Admin\Course\EditCourseComponent;
-use App\Livewire\Admin\Settings\SettingsComponent;
-use App\Livewire\Admin\Course\CreateCourseComponent;
-use App\Livewire\Admin\Faculty\CreateFacultyComponent;
-use App\Livewire\Admin\Faculty\EditFacultyComponent;
 use App\Livewire\Admin\Faculty\FacultyComponent;
+use App\Livewire\Admin\Gallery\GalleryComponent;
+use App\Livewire\Admin\Contact\ContactComponenet;
+use App\Livewire\Admin\Course\EditCourseComponent;
+use App\Livewire\Admin\Notice\EditNoticeComponent;
+use App\Livewire\Admin\Settings\SettingsComponent;
+use App\Livewire\Admin\Notice\IndexNoticeComponent;
+use App\Livewire\Admin\Course\CreateCourseComponent;
+use App\Livewire\Admin\Faculty\EditFacultyComponent;
 use App\Livewire\Admin\Gallery\EditGalleryComponent;
+use App\Livewire\Admin\Notice\CreateNoticeComponent;
+use App\Livewire\Admin\Client\ClientFeedbackComponent;
+use App\Livewire\Admin\Faculty\CreateFacultyComponent;
 use App\Livewire\Admin\Gallery\CreateGalleryComponent;
 use App\Livewire\Admin\HomeSlider\HomeSliderComponent;
+use App\Livewire\Admin\Client\EditClientFeedbackComponent;
 use App\Livewire\Admin\HomeSlider\EditHomeSliderComponent;
+
 use App\Livewire\Admin\Partner\CreatePartnerComponent;
 use App\Livewire\Admin\Partner\EditPartnerComponent;
 use App\Livewire\Admin\Partner\PartnerComponent;
 use App\Models\Partner;
 
+use App\Livewire\Admin\Client\CreateClientFeedbackComponent;
+
+
 Route::get('/', HomeComponent::class);
 Route::get('/mission-vision', MissionVisionComponent::class)->name('mission');
 Route::get('/management-team', ManagementTeamComponent::class)->name('management-team');
 Route::get('/notice-board', NoticeBoardComponent::class)->name('notice');
-Route::get('/news', NewsComponent::class)->name('news');
+Route::get('/notice-details/{slug}', NoticeDetailsComponent::class)->name('notice.details');
+Route::get('/news', App\Livewire\NewsComponent::class)->name('news');
+Route::get('/news-details/{slug}', App\Livewire\NewsDetailsComponent::class)->name('news.details');
 Route::get('/affiliate', AffiliateComponent::class)->name('affiliate');
 Route::get('/teachers', TeachersComponent::class)->name('teachers');
 Route::get('/courses', CoursesComponent::class)->name('courses');
@@ -49,6 +62,8 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'),'verified',]
     Route::get('/dashboard', DashboardComponent::class)->name('dashboard');
     Route::get('admin/home-slider', HomeSliderComponent::class)->name('home-slider');
     Route::get('admin/home-slider/edit/{id}', EditHomeSliderComponent::class)->name('home-slider.edit');
+
+
     Route::get('admin/settings', SettingsComponent::class)->name('settings');
     Route::get('admin/contacts', ContactComponenet::class)->name('contacts');
 
@@ -67,12 +82,34 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'),'verified',]
         Route::get('/faculty', FacultyComponent::class)->name('admin.faculty');
         Route::get('/faculty/create', CreateFacultyComponent::class)->name('faculty.create');
         Route::get('/faculty/edit/{id}', EditFacultyComponent::class)->name('faculty.edit');
+
+        //  news.route
+        Route::get('/news', App\Livewire\Admin\News\NewsComponent::class)->name('admin.news');
+        Route::get('/news/create', App\Livewire\Admin\News\CreateNewsComponent::class)->name('news.create');
+        Route::get('/news/edit/{id}', App\Livewire\Admin\News\EditNewsComponent::class)->name('news.edit');
+
+        //  notice.route
+        Route::get('/notice', IndexNoticeComponent::class)->name('admin.notice');
+        Route::get('/notice/create', CreateNoticeComponent::class)->name('notice.create');
+        Route::get('/notice/edit/{id}', EditNoticeComponent::class)->name('notice.edit');
+
+        //  client.feedback.route
+        Route::get('/client-feedback', ClientFeedbackComponent::class)->name('admin.feedback');
+        Route::get('/client-feedback/create', CreateClientFeedbackComponent::class)->name('feedback.create');
+        Route::get('/client-feedback/edit/{id}', EditClientFeedbackComponent::class)->name('feedback.edit');
+
+        //  mission.vision.route
+        Route::get('/mission-vision', App\Livewire\Admin\Mission\MissionVisionComponent::class)->name('mission.vision');
     });
+
 
     Route::get('admin/admissions', AdmissionApplationsComponent::class)->name('admin.admissions');
     Route::get('admin/partners', PartnerComponent::class)->name('partners');
     Route::get('admin/partners/create', CreatePartnerComponent::class)->name('partner.create');
     Route::get('admin/partners/edit/{id}', EditPartnerComponent::class)->name('partner.edit');
     Route::get('admin/settings', SettingsComponent::class)->name('settings');
+
+
+
 
 });

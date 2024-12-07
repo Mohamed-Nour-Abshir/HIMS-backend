@@ -45,7 +45,7 @@
                                     background: linear-gradient(to right, #223a66, #e02453);
                                     -webkit-background-clip: text;
                                     -webkit-text-fill-color: transparent;
-                                    } 
+                                    }
                             </style>
                             <img class="" id="logo_header" alt="" src="{{asset('assets/images/logo-removebg-preview.png')}}"
                                 data-light="{{asset('assets/images/logo-removebg-preview.png')}}" data-dark="{{asset('assets/images/logo-removebg-preview.png')}}" width="50"> <span class="mt-5 h3 ms-3 gradient-text">HIMS</span>
@@ -55,7 +55,7 @@
                         </div>
                     </div>
                     <div class="center">
-                        <div class="center-item">
+                        <div class="mb-0 center-item">
                             <div class="center-heading">Main Home</div>
                             <ul class="menu-list">
                                 <li class="menu-item">
@@ -81,13 +81,44 @@
                                     </a>
                                 </li>
                                 <li class="menu-item">
+                                    <a href="{{route('mission.vision')}}" class="@if(request()->routeIs('mission.vision')) active @endif)">
+                                        <div class="icon"><i class="icon-home"></i></div>
+                                        <div class="text">Mission & Vision</div>
+                                    </a>
+                                </li>
+
+                                <li class="menu-item">
+                                    <a href="{{route('admin.notice')}}" class="@if(request()->routeIs('admin.notice') || request()->routeIs('notice.create') || request()->routeIs('notice.edit')) active @endif">
+                                        <div class="icon"><i class="icon-book-open"></i></div>
+                                        <div class="text">Manage Notice</div>
+                                    </a>
+                                </li>
+
+                                <li class="menu-item">
+                                    <a href="{{route('admin.feedback')}}" class="@if(request()->routeIs('admin.feedback') || request()->routeIs('feedback.create') || request()->routeIs('feedback.edit')) active @endif">
+                                        <div class="icon"><i class="icon-book-open"></i></div>
+                                        <div class="text">Manage Feedback</div>
+                                    </a>
+                                </li>
+
+                                <li class="menu-item">
+                                    <a href="{{route('admin.news')}}" class="@if(request()->routeIs('admin.news') || request()->routeIs('news.create') || request()->routeIs('news.edit')) active @endif">
+                                        <div class="icon"><i class="icon-book-open"></i></div>
+                                        <div class="text">Manage News</div>
+                                    </a>
+                                </li>
+
+
+                                <li class="menu-item">
                                     <a href="{{route('admin.course')}}" class="@if(request()->routeIs('admin.course') || request()->routeIs('course.create') || request()->routeIs('course.edit')) active @endif">
                                         <div class="icon"><i class="icon-book-open"></i></div>
                                         <div class="text">Manage Course</div>
                                     </a>
                                 </li>
                                 <li class="menu-item">
+
                                     <a href="{{route('settings')}}" class="{{ Request::is('admin/ settings') ? 'active' : '' }}">
+
                                     <a href="{{route('admin.faculty')}}" class="@if(request()->routeIs('admin.faculty') || request()->routeIs('faculty.create') || request()->routeIs('faculty.edit')) active @endif">
                                         <div class="icon"><i class="icon-book-open"></i></div>
                                         <div class="text">Manage Faculty</div>
@@ -101,6 +132,7 @@
                                 </li>
                                 
                                 <li class="menu-item">
+
                                     <a href="{{route('contacts')}}" class="{{ Request::is('admin/contacts') ? 'active' : '' }}">
                                         <div class="icon"><i class="icon-users"></i></div>
                                         <div class="text">Contacts</div>
@@ -111,6 +143,12 @@
                                     <a href="{{route('partners')}}" class="{{ Request::is('admin/partners') ? 'active' : '' }}">
                                         <div class="icon"><i class="icon-user"></i></div>
                                         <div class="text">Partners</div>
+
+                                    <a href="{{route('settings')}}" class="{{ Request::is('admin/ settings') ? 'active' : '' }}">
+
+                                        <div class="icon"><i class="icon-settings"></i></div>
+                                        <div class="text">Settings</div>
+
                                     </a>
                                 </li>
                                 <li class="menu-item">

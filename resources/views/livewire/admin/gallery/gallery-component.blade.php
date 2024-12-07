@@ -63,7 +63,7 @@
                                                                 <i class="icon-edit"></i>
                                                             </div>
                                                         </a>
-                                                        <a href="javascript:void(0)" wire:click.prevent="deleteGallery({{$gallery->id}})">
+                                                        <a href="javascript:void(0)" onclick="confirm('Are you sure to delete this feedback?') || event.stopImmediatePropagation()"  wire:click.prevent="deleteGallery({{$gallery->id}})">
                                                             <div class="item trash">
                                                                 <i class="icon-trash"></i>
                                                             </div>

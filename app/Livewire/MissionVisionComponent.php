@@ -8,6 +8,8 @@ class MissionVisionComponent extends Component
 {
     public function render()
     {
-        return view('livewire.mission-vision-component')->layout('layouts.base');
+        return view('livewire.mission-vision-component',[
+            "mission_vision" => \App\Models\MissionVision::first(),
+        ])->layout('layouts.base');
     }
 }
