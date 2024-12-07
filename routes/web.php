@@ -31,7 +31,7 @@ Route::get('/', HomeComponent::class);
 Route::get('/mission-vision', MissionVisionComponent::class)->name('mission');
 Route::get('/management-team', ManagementTeamComponent::class)->name('management-team');
 Route::get('/notice-board', NoticeBoardComponent::class)->name('notice');
-Route::get('/news', NewsComponent::class)->name('news');
+Route::get('/news', App\Livewire\NewsComponent::class)->name('news');
 Route::get('/affiliate', AffiliateComponent::class)->name('affiliate');
 Route::get('/teachers', TeachersComponent::class)->name('teachers');
 Route::get('/courses', CoursesComponent::class)->name('courses');
@@ -63,6 +63,11 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'),'verified',]
         Route::get('/faculty', FacultyComponent::class)->name('admin.faculty');
         Route::get('/faculty/create', CreateFacultyComponent::class)->name('faculty.create');
         Route::get('/faculty/edit/{id}', EditFacultyComponent::class)->name('faculty.edit');
+
+        //  news.route
+        Route::get('/news', App\Livewire\Admin\News\NewsComponent::class)->name('admin.news');
+        Route::get('/news/create', App\Livewire\Admin\News\CreateNewsComponent::class)->name('news.create');
+        Route::get('/news/edit/{id}', App\Livewire\Admin\News\EditNewsComponent::class)->name('news.edit');
 
         //  mission.vision.route
         Route::get('/mission-vision', App\Livewire\Admin\Mission\MissionVisionComponent::class)->name('mission.vision');
