@@ -32,6 +32,7 @@ Route::get('/mission-vision', MissionVisionComponent::class)->name('mission');
 Route::get('/management-team', ManagementTeamComponent::class)->name('management-team');
 Route::get('/notice-board', NoticeBoardComponent::class)->name('notice');
 Route::get('/news', App\Livewire\NewsComponent::class)->name('news');
+Route::get('/news-details/{slug}', App\Livewire\NewsDetailsComponent::class)->name('news.details');
 Route::get('/affiliate', AffiliateComponent::class)->name('affiliate');
 Route::get('/teachers', TeachersComponent::class)->name('teachers');
 Route::get('/courses', CoursesComponent::class)->name('courses');

@@ -20,7 +20,7 @@
                             <p class="card-text">
                                 {!! Str::limit($news?->description, 50, '...') !!}
                             </p>
-                            <a href="#" class="btn btn-outline-primary btn-sm">Read More <i class="ml-2 icofont-simple-right"></i></a>
+                            <a href="{{ route('news.details', $news?->slug) }}" class="btn btn-outline-primary btn-sm">Read More <i class="ml-2 icofont-simple-right"></i></a>
                         </div>
                     </div>
                 </div>
