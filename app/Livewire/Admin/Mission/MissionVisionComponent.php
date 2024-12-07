@@ -17,11 +17,11 @@ class MissionVisionComponent extends Component
     public function mount()
     {
         $mission_vision = MissionVision::first();
-        $this->chairman_message = $mission_vision->chairman_message;
-        $this->chairman_old_image = $mission_vision->chairman_image;
-        $this->md_message = $mission_vision->md_message;
-        $this->md_old_image = $mission_vision->md_image;
-        $this->mission_id = $mission_vision->id;
+        $this->chairman_message = $mission_vision?->chairman_message;
+        $this->chairman_old_image = $mission_vision?->chairman_image;
+        $this->md_message = $mission_vision?->md_message;
+        $this->md_old_image = $mission_vision?->md_image;
+        $this->mission_id = $mission_vision?->id;
     }
 
     public function mission_vision_update()
