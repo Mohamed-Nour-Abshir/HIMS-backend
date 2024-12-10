@@ -14,7 +14,7 @@
                                     </div>
                                     <div>
                                         <div class="body-text mb-2 text-light">Total Applications</div>
-                                        <h4 class="text-light">3</h4>
+                                        <h4 class="text-light">{{$admissions->count()}}</h4>
                                     </div>
                                 </div>
                             </div>
@@ -29,55 +29,7 @@
                                     </div>
                                     <div>
                                         <div class="body-text mb-2 text-light">Total Courses</div>
-                                        <h4 class="text-light">6</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="wg-chart-default mb-20 bg-info">
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center gap14">
-                                    <div class="image ic-bg">
-                                        <i class="icon-shopping-bag" style="color: #fff !important;"></i>
-                                    </div>
-                                    <div>
-                                        <div class="body-text mb-2 text-light">Team</div>
-                                        <h4 class="text-light">3</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="wg-chart-default bg-warning">
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center gap14">
-                                    <div class="image ic-bg">
-                                        <i class="icon-shopping-bag" style="color: #fff !important;"></i>
-                                    </div>
-                                    <div>
-                                        <div class="body-text mb-2 text-light">Teachers</div>
-                                        <h4 class="text-light">4</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="w-full">
-
-                        <div class="wg-chart-default mb-20 bg-dark">
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center gap14">
-                                    <div class="image ic-bg">
-                                        <i class="icon-shopping-bag" style="color: #fff !important;"></i>
-                                    </div>
-                                    <div>
-                                        <div class="body-text mb-2 text-light">Notice</div>
-                                        <h4 class="text-light">0</h4>
+                                        <h4 class="text-light">{{$courses->count()}}</h4>
                                     </div>
                                 </div>
                             </div>
@@ -91,8 +43,41 @@
                                         <i class="icon-shopping-bag" style="color: #fff !important;"></i>
                                     </div>
                                     <div>
+                                        <div class="body-text mb-2 text-light">Team</div>
+                                        <h4 class="text-light">{{$team->count()}}</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="w-full">
+
+                        <div class="wg-chart-default mb-20 bg-warning">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap14">
+                                    <div class="image ic-bg">
+                                        <i class="icon-shopping-bag" style="color: #fff !important;"></i>
+                                    </div>
+                                    <div>
+                                        <div class="body-text mb-2 text-light">Notice</div>
+                                        <h4 class="text-light">{{$notices->count()}}</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="wg-chart-default mb-20 bg-info">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap14">
+                                    <div class="image ic-bg">
+                                        <i class="icon-shopping-bag" style="color: #fff !important;"></i>
+                                    </div>
+                                    <div>
                                         <div class="body-text mb-2 text-light">News</div>
-                                        <h4 class="text-light">0</h4>
+                                        <h4 class="text-light">{{$news->count()}}</h4>
                                     </div>
                                 </div>
                             </div>
@@ -107,22 +92,7 @@
                                     </div>
                                     <div>
                                         <div class="body-text mb-2 text-light">Contacts</div>
-                                        <h4 class="text-light">0</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="wg-chart-default">
-                            <div class="flex items-center justify-between">
-                                <div class="flex items-center gap14">
-                                    <div class="image ic-bg">
-                                        <i class="icon-shopping-bag"></i>
-                                    </div>
-                                    <div>
-                                        <div class="body-text mb-2">Affiliates</div>
-                                        <h4>0</h4>
+                                        <h4 class="text-light">{{$contacts->count()}}</h4>
                                     </div>
                                 </div>
                             </div>
@@ -133,13 +103,13 @@
                 </div>
 
             </div>
-            {{-- <div class="tf-section mb-30">
+            <div class="tf-section mb-30">
 
                 <div class="wg-box">
                     <div class="flex items-center justify-between">
                         <h5>Recent applications</h5>
                         <div class="dropdown default">
-                            <a class="btn btn-secondary dropdown-toggle" href="#">
+                            <a class="btn btn-secondary dropdown-toggle" href="{{route('admin.admissions')}}">
                                 <span class="view-all">View all</span>
                             </a>
                         </div>
@@ -149,50 +119,41 @@
                             <table class="table table-striped table-bordered">
                                 <thead>
                                     <tr>
-                                        <th style="width: 80px">OrderNo</th>
-                                        <th>Name</th>
+                                        <th style="width: 80px">SLNo. </th>
+                                        <th class="text-center">Full Name</th>
                                         <th class="text-center">Phone</th>
-                                        <th class="text-center">Subtotal</th>
-                                        <th class="text-center">Tax</th>
-                                        <th class="text-center">Total</th>
+                                        <th class="text-center">Email</th>
+                                        <th class="text-center">Date of birth</th>
+                                        <th class="text-center">Address</th>
 
-                                        <th class="text-center">Status</th>
-                                        <th class="text-center">Order Date</th>
-                                        <th class="text-center">Total Items</th>
-                                        <th class="text-center">Delivered On</th>
-                                        <th></th>
+                                        <th class="text-center">Course name</th>
+                                        <th class="text-center">Additional info</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td class="text-center">1</td>
-                                        <td class="text-center">Divyansh Kumar</td>
-                                        <td class="text-center">1234567891</td>
-                                        <td class="text-center">$172.00</td>
-                                        <td class="text-center">$36.12</td>
-                                        <td class="text-center">$208.12</td>
+                                    @php
+                                        $i = 0;
+                                    @endphp
+                                    @foreach ($latest_admissions as $latest_admission)
+                                        <tr>
+                                            <td class="text-center">{{++$i}}</td>
+                                            <td class="text-center">{{$latest_admission->full_name}}</td>
+                                            <td class="text-center">{{$latest_admission->phone}}</td>
+                                            <td class="text-center">{{$latest_admission->email}}</td>
+                                            <td class="text-center">{{$latest_admission->dob}}</td>
+                                            <td class="text-center">{{$latest_admission->address}}</td>
+                                            <td class="text-center">{{$latest_admission->course_name}}</td>
 
-                                        <td class="text-center">ordered</td>
-                                        <td class="text-center">2024-07-11 00:54:14</td>
-                                        <td class="text-center">2</td>
-                                        <td></td>
-                                        <td class="text-center">
-                                            <a href="#">
-                                                <div class="list-icon-function view-icon">
-                                                    <div class="item eye">
-                                                        <i class="icon-eye"></i>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </td>
-                                    </tr>
+                                            <td class="text-center">{{$latest_admission->additional_info}}</td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
 
-            </div> --}}
+            </div>
         </div>
 
     </div>

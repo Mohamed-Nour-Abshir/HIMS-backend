@@ -38,18 +38,18 @@ class MissionVisionComponent extends Component
         $mission_vision->md_message = $this->md_message;
 
         if ($this->chairman_image) {
-            if ($this->chairman_old_image != null) {
-                unlink('assets/images/mission_vision/' . $this->chairman_old_image);
-            }
+            // if ($this->chairman_old_image != null) {
+            //     unlink('assets/images/mission_vision/' . $this->chairman_old_image);
+            // }
             $filename = Str::uuid() . '.' . $this->chairman_image->extension();
             $this->chairman_image->storeAs('mission_vision', $filename);
             $mission_vision->chairman_image = $filename;
         }
 
         if ($this->md_image) {
-            if ($this->md_old_image != null) {
-                unlink('assets/images/mission_vision/' . $this->md_old_image);
-            }
+            // if ($this->md_old_image != null) {
+            //     unlink('assets/images/mission_vision/' . $this->md_old_image);
+            // }
             $filename = Str::uuid() . '.' . $this->md_image->extension();
             $this->md_image->storeAs('mission_vision', $filename);
             $mission_vision->md_image = $filename;

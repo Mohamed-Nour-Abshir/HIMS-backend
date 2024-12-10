@@ -85,7 +85,7 @@ Essential stylesheets
 							<ul class="dropdown-menu" aria-labelledby="dropdown03">
 								<li><a class="dropdown-item" href="{{route('notice')}}">Notice board</a></li>
 								<li><a class="dropdown-item" href="{{route('news')}}">News</a></li>
-								<li><a class="dropdown-item" href="{{route('affiliate')}}">Affiliated By</a></li>
+								{{-- <li><a class="dropdown-item" href="{{route('affiliate')}}">Affiliated By</a></li> --}}
 								<li><a class="dropdown-item" href="{{route('teachers')}}">Teachers</a></li>
 							</ul>
 						</li>
@@ -112,7 +112,7 @@ Essential stylesheets
 							<img src="{{asset('assets/images/Settings')}}/{{$settings->web_logo}} " alt="" class="img-fluid" width="100">
 							<!-- <h1>HIMS</h1> -->
 						</div>
-						<p>Tempora dolorem voluptatum nam vero assumenda voluptate, facilis ad eos obcaecati tenetur veritatis eveniet distinctio possimus.</p>
+						<p>Heartbeat institute of medical science (HIMS) as a pioneer Institute for providing to improve the skills of medical student, Nutritionist, Pharmacist & Health Service Professionals.</p>
 
 						<ul class="list-inline footer-socials mt-4">
 							<li class="list-inline-item">
