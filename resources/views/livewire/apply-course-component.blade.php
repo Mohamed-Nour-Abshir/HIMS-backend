@@ -6,8 +6,8 @@
             <div class="col-md-12">
               <div class="block text-center">
                 <span class="text-white">Book your Seat</span>
-                <h1 class="text-capitalize mb-5 text-lg">Admission</h1>
-      
+                <h1 class="mb-5 text-lg text-capitalize">Admission</h1>
+
                 <!-- <ul class="list-inline breadcumb-nav">
                   <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>
                   <li class="list-inline-item"><span class="text-white">/</span></li>
@@ -18,25 +18,25 @@
           </div>
         </div>
     </section>
-      
+
     <section class="appoinment section">
     <div class="container">
         <div class="row">
         <div class="col-lg-4">
             <div class="mt-3">
-                <div class="feature-icon mb-3">
-                <i class="icofont-support text-lg"></i>
+                <div class="mb-3 feature-icon">
+                <i class="text-lg icofont-support"></i>
                 </div>
                 <span class="h3">Call for Help!</span>
-                <h3 class="text-color mt-3">+880 1730-191922 </h3>
+                <h3 class="mt-3 text-color">+88{{ $setting?->web_phone }} </h3>
             </div>
         </div>
-    
+
         <div class="col-lg-8">
-                <div class="appoinment-wrap mt-5 mt-lg-0 pl-lg-5">
+                <div class="mt-5 appoinment-wrap mt-lg-0 pl-lg-5">
                 <h2 class="mb-2 title-color">Apply for Admission</h2>
                 <p class="mb-4">Start your journey with us today! Join our vibrant community of learners and take the first step toward achieving your educational goals. Explore our programs, apply now, and unlock your potential.</p>
-                
+
                 <form id="admission-form" class="appoinment-form" wire:submit.prevent='applyNow'>
                     <div class="row">
                         <div class="col-12">
@@ -57,7 +57,7 @@
                                     @foreach ($courses as $course)
                                         <option value="{{$course->course_name}}">{{$course->course_name}}</option>
                                     @endforeach
-                                    
+
                                 </select>
                                 @error('course_name') <span class="text-danger">{{$message}}</span> @enderror
                             </div>
@@ -122,7 +122,7 @@
                         <button class="btn btn-main btn-round-full">Submit Application<i class="ml-2 icofont-simple-right"></i></button>
                     </div>
                 </form>
-                
+
                 </div>
             </div>
         </div>

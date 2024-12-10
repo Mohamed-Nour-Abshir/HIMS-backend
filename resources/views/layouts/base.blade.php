@@ -21,7 +21,7 @@
 <meta name="theme-name" content="HIMS" />
 <!-- Favicon -->
 <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/images/Settings')}}/{{$settings->web_favicon}}" />
-<!-- 
+<!--
 Essential stylesheets
 =====================================-->
 <link rel="stylesheet" href="{{asset('assets/plugins/bootstrap/bootstrap.min.css')}}">
@@ -85,7 +85,7 @@ Essential stylesheets
 							<ul class="dropdown-menu" aria-labelledby="dropdown03">
 								<li><a class="dropdown-item" href="{{route('notice')}}">Notice board</a></li>
 								<li><a class="dropdown-item" href="{{route('news')}}">News</a></li>
-								<li><a class="dropdown-item" href="{{route('affiliate')}}">Affiliated By</a></li>
+								{{-- <li><a class="dropdown-item" href="{{route('affiliate')}}">Affiliated By</a></li> --}}
 								<li><a class="dropdown-item" href="{{route('teachers')}}">Teachers</a></li>
 							</ul>
 						</li>
@@ -210,7 +210,7 @@ Essential stylesheets
 		</div>
 	</footer>
 
-	<!-- 
+	<!--
 	Essential Scripts
 	=====================================-->
 	<script src="{{asset('assets/plugins/jquery/jquery.js')}}"></script>
@@ -221,7 +221,7 @@ Essential stylesheets
 	<!-- Google Map -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA"></script>
 	<script src="{{asset('assets/plugins/google-map/gmap.js')}}"></script>
-	
+
 	<script src="{{asset('assets/js/script.js')}}"></script>
     @livewireScripts
 
