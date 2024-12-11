@@ -6,7 +6,7 @@
 				<div class="col-lg-6 col-md-10">
 					<h3>Chairman Message</h3>
 					<p>
-                        {!! $mission_vision->chairman_message !!}
+                        {!! $mission_vision?->chairman_message !!}
                     </p>
 				</div>
 				<div class="col-lg-6 ">
@@ -20,7 +20,7 @@
 				<div class="col-lg-6 col-md-10">
 					<h3>Managing Director Message</h3>
 					<p>
-                        {!! $mission_vision->md_message !!}
+                        {!! $mission_vision?->md_message !!}
                     </p>
 				</div>
 				<div class="col-lg-6 col-md-10">

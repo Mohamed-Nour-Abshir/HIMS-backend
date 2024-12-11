@@ -53,10 +53,10 @@
             <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="section-title text-center">
-                <h2 class="text-md mb-2">Contact us</h2>
-                <div class="divider mx-auto my-4"></div>
-                <p class="mb-5">Laboriosam exercitationem molestias beatae eos pariatur, similique, excepturi mollitia sit
-                    perferendis maiores ratione aliquam?</p>
+                    <h2 class="text-md mb-2">Contact Us</h2>
+                    <div class="divider mx-auto my-4"></div>
+                    <p class="mb-5">Have questions or need assistance? We're here to help! Reach out to us, and our team will get back to you promptly with the support you need.</p>
+                    
                 </div>
             </div>
             </div>

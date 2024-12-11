@@ -144,13 +144,13 @@
                                     </a>
 
                                 </li>
-                                <li class="menu-item">
+                                {{-- <li class="menu-item">
 
                                     <a href="{{route('settings')}}" class="{{ Request::is('admin/settings') ? 'active' : '' }}">
                                         <div class="icon"><i class="icon-settings"></i></div>
                                         <div class="text">Settings</div>
                                     </a>
-                                </li>
+                                </li> --}}
 
                             </ul>
                         </div>

@@ -33,6 +33,7 @@ return [
         'local' => [
             'driver' => 'local',
             'root' => public_path('assets/images'),
+            // 'root' => base_path('assets/images'),
             'serve' => true,
             'throw' => false,
         ],

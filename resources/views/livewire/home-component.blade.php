@@ -281,9 +281,10 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-7">
 					<div class="text-center section-title">
-						<h2>We trained over 5000+ Students</h2>
+						<h2>Empowering Over 5,000 Students Worldwide</h2>
 						<div class="mx-auto my-4 divider"></div>
-						<p>Lets know moreel necessitatibus dolor asperiores illum possimus sint voluptates incidunt molestias nostrum laudantium. Maiores porro cumque quaerat.</p>
+						<p>Join our community of learners and unlock your true potential with cutting-edge courses, expert mentorship, and hands-on training. Discover opportunities to excel in your career and make a lasting impact in your chosen field.</p>
+
 					</div>
 				</div>
 			</div>
@@ -320,9 +321,10 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-7">
 					<div class="text-center section-title">
-						<h2>Partners who support us</h2>
+						<h2>Our Trusted Partners</h2>
 						<div class="mx-auto my-4 divider"></div>
-						<p>Lets know moreel necessitatibus dolor asperiores illum possimus sint voluptates incidunt molestias nostrum laudantium. Maiores porro cumque quaerat.</p>
+						<p>We are proud to collaborate with industry leaders and organizations that share our vision of innovation and excellence. Their support helps us achieve our goals and make a positive impact in the communities we serve.</p>
+
 					</div>
 				</div>
 			</div>
