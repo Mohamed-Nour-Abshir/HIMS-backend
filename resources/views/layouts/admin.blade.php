@@ -29,6 +29,12 @@
             font-weight: bold;
             margin-top: 10px !important;
         }
+
+        option[selected] {
+            background: #006eff;
+            color: white;
+        }
+
     </style>
     @livewireStyles
 </head>

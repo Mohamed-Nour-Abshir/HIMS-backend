@@ -196,6 +196,25 @@
                             </div>
                         @endif
                         </fieldset>
+                        <fieldset class="name">
+                            <div class="mb-10 body-title">Select Trainer</div>
+                            <div class="mb-10 select">
+                                <select class="@if('trainers') is-invalid @endif')" wire:model="trainers" multiple>
+                                    {{-- <option value="">----Select Trainers----</option> --}}
+                                    @php
+                                        $trainerss = App\Models\Faculty::all();
+                                    @endphp
+                                    @foreach ($trainerss as $trainer)
+                                        <option value="{{$trainer->name}}">{{$trainer->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        @if('trainers')
+                            <div class="text-3xl invalid-feedback" style="font-size: 1.5rem">
+                                {{ $errors->first('trainers') }}
+                            </div>
+                        @endif
+                        </fieldset>
                     </div>
                          @if(session()->has('message'))
                             <div class="text-3xl text-green-600" style="font-size: 1.5rem">

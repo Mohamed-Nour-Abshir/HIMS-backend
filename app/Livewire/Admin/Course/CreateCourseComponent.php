@@ -14,7 +14,7 @@ class CreateCourseComponent extends Component
 
     public $course_name, $slug, $image, $course_modules, $duration, $lectures, $hours;
     public $department, $regular_price, $discount_price, $description, $status='Active';
-
+    public $trainers;
 
 
     public function createCourse()
@@ -32,6 +32,7 @@ class CreateCourseComponent extends Component
             'discount_price' => 'nullable|numeric',
             'description' => 'nullable|string',
             'status' => 'nullable|in:Active,Inactive',
+            'trainers' => 'required|array|min:1',
         ]);
 
         try {
@@ -47,6 +48,7 @@ class CreateCourseComponent extends Component
             $course->discount_price = $this->discount_price;
             $course->description = $this->description;
             $course->status = $this->status;
+            $course->trainers = json_encode($this->trainers);
 
             if ($this->image) {
                 $imageName = Carbon::now()->timestamp . '.' . $this->image->getClientOriginalExtension();

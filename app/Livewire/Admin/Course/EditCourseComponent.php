@@ -14,7 +14,7 @@ class EditCourseComponent extends Component
 
     public $course_name, $slug, $oldimage, $course_modules, $duration, $lectures, $hours;
     public $department, $regular_price, $discount_price, $description, $status, $image;
-    public $course_id;
+    public $course_id,$trainers;
 
     public function mount($id){
         $this->course_id = $id;
@@ -31,6 +31,7 @@ class EditCourseComponent extends Component
         $this->discount_price = $course->discount_price;
         $this->description = $course->description;
         $this->status = $course->status;
+        $this->trainers = json_decode($course->trainers);
     }
 
     public function updateCourse()
@@ -48,6 +49,7 @@ class EditCourseComponent extends Component
             'discount_price' => 'nullable|numeric',
             'description' => 'nullable|string',
             'status' => 'nullable|in:Active,Inactive',
+            'trainers' => 'required|array|min:1',
         ]);
 
         try {
@@ -63,6 +65,7 @@ class EditCourseComponent extends Component
             $course->discount_price = $this->discount_price;
             $course->description = $this->description;
             $course->status = $this->status;
+            $course->trainers = json_encode($this->trainers);
 
             if ($this->image) {
                 if($this->oldimage){

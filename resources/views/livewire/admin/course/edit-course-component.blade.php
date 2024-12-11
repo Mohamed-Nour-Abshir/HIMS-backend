@@ -199,6 +199,30 @@
                             </div>
                         @endif
                         </fieldset>
+                        <fieldset class="name">
+                            <div class="mb-10 body-title">Select Trainer</div>
+                            <div class="mb-10 select">
+                                <select class="{{ $errors->has('trainers') ? 'is-invalid' : '' }}" wire:model="trainers" multiple>
+                                    {{-- Fetch available trainers --}}
+                                    @php
+                                        $availableTrainers = App\Models\Faculty::all();
+                                    @endphp
+
+                                    @foreach ($availableTrainers as $trainer)
+                                        <option value="{{ $trainer->name }}"
+                                            @if (is_array($trainers) && in_array($trainer->name, $trainers)) selected="selected" @endif>
+                                            {{ $trainer->name }}
+                                        </option>
+                                    @endforeach
+                                </select>
+
+                            </div>
+                        @if('trainers')
+                            <div class="text-3xl invalid-feedback" style="font-size: 1.5rem">
+                                {{ $errors->first('trainers') }}
+                            </div>
+                        @endif
+                        </fieldset>
                     </div>
                          @if(session()->has('message'))
                             <div class="text-3xl text-success" style="font-size: 1.5rem">
