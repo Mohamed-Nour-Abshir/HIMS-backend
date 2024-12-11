@@ -18,16 +18,17 @@
                         </li>
                     </ul>
                 </div>
-    
+
                 <div class="wg-box">
                     <div class="wg-table table-all-user">
                         <div class="table-responsive">
-                            <table class="table table-bordered">
+                            <table class="table table-bordered table-responsive">
                                 <thead>
                                     <tr>
                                         <th>#</th>
                                         <th>Full Name</th>
                                         <th>Email</th>
+                                        <th>BMDC Reg NO</th>
                                         <th>Phone No</th>
                                         <th>Address</th>
                                         <th>Date of birth</th>
@@ -44,7 +45,8 @@
                                         <tr>
                                             <td>{{++$i}}</td>
                                             <td>{{$admission->full_name}}</td>
-                                            <td>{{$admission->email}}</td>
+                                            <td class="overflow-scroll">{{$admission->email}}</td>
+                                            <td>{{$admission->bmdc_reg_no}}</td>
                                             <td>{{$admission->phone}}</td>
                                             <td>{{$admission->address}}</td>
                                             <td>{{$admission->dob}}</td>
@@ -64,12 +66,12 @@
                         </div>
                         <div class="divider"></div>
                         <div class="flex flex-wrap items-center justify-between gap10 wgp-pagination">
-    
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
 </div>

@@ -184,8 +184,8 @@
 				<div class="col-lg-6 col-md-10 ">
 					<div class="mt-5 appoinment-wrap mt-lg-0">
 						<h2 class="mb-2 title-color">Make Your Admission Today</h2>
-						<p class="mb-4">Join our institution to unlock a world of opportunities! Start your academic journey by enrolling in one of our prestigious programs. Take the first step towards achieving your dreams and building a brighter future with us.</p>						
-						
+						<p class="mb-4">Join our institution to unlock a world of opportunities! Start your academic journey by enrolling in one of our prestigious programs. Take the first step towards achieving your dreams and building a brighter future with us.</p>
+
 						<form id="admission-form" class="appoinment-form" wire:submit.prevent='applyNow'>
 							<div class="row">
 								<div class="col-12">
@@ -206,7 +206,7 @@
 											@foreach ($courses as $course)
 												<option value="{{$course->course_name}}">{{$course->course_name}}</option>
 											@endforeach
-											
+
 										</select>
 										@error('course_name') <span class="text-danger">{{$message}}</span> @enderror
 									</div>
@@ -250,12 +250,19 @@
 
 								<!-- Address -->
 								<div class="col-lg-6">
-									<div class="form-group">
-										<label for="">Present address</label>
-										<input wire:model="address" type="text" class="form-control" placeholder="Address">
-										@error('address') <span class="text-danger">{{$message}}</span> @enderror
-									</div>
-								</div>
+                                    <div class="form-group">
+                                        <label for="">BMDC Registration No</label>
+                                        <input wire:model="bmdc_reg_no" type="text" class="form-control" placeholder="BMDC Registration No">
+                                        @error('bmdc_reg_no') <span class="text-danger">{{$message}}</span> @enderror
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label for="">Present address</label>
+                                        <input wire:model="address" type="text" class="form-control" placeholder="Address">
+                                        @error('address') <span class="text-danger">{{$message}}</span> @enderror
+                                    </div>
+                                </div>
 
 								<!-- Message (Optional) -->
 								<div class="col-lg-12">
@@ -339,7 +346,7 @@
 						</div>
 					</div>
 				@endforeach
-				
+
 
 			</div>
 		</div>

@@ -147,12 +147,12 @@
                                                 @foreach ($courses as $course)
                                                     <option value="{{$course->course_name}}">{{$course->course_name}}</option>
                                                 @endforeach
-                                                
+
                                             </select>
                                             @error('course_name') <span class="text-danger">{{$message}}</span> @enderror
                                         </div>
                                     </div>
-    
+
                                     <!-- Full Name -->
                                     <div class="col-lg-6">
                                         <div class="form-group">
@@ -161,7 +161,7 @@
                                             @error('full_name') <span class="text-danger">{{$message}}</span> @enderror
                                         </div>
                                     </div>
-    
+
                                     <!-- Date of Birth -->
                                     <div class="col-lg-6">
                                         <div class="form-group">
@@ -170,7 +170,7 @@
                                             @error('dob') <span class="text-danger">{{$message}}</span> @enderror
                                         </div>
                                     </div>
-    
+
                                     <!-- Email -->
                                     <div class="col-lg-6">
                                         <div class="form-group">
@@ -179,7 +179,7 @@
                                             @error('email') <span class="text-danger">{{$message}}</span> @enderror
                                         </div>
                                     </div>
-    
+
                                     <!-- Phone -->
                                     <div class="col-lg-6">
                                         <div class="form-group">
@@ -188,16 +188,23 @@
                                             @error('phone') <span class="text-danger">{{$message}}</span> @enderror
                                         </div>
                                     </div>
-    
+
                                     <!-- Address -->
                                     <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="">BMDC Registration No</label>
+                                            <input wire:model="bmdc_reg_no" type="text" class="form-control" placeholder="BMDC Registration No">
+                                            @error('bmdc_reg_no') <span class="text-danger">{{$message}}</span> @enderror
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
                                         <div class="form-group">
                                             <label for="">Present address</label>
                                             <input wire:model="address" type="text" class="form-control" placeholder="Address">
                                             @error('address') <span class="text-danger">{{$message}}</span> @enderror
                                         </div>
                                     </div>
-    
+
                                     <!-- Message (Optional) -->
                                     <div class="col-lg-12">
                                         <div class="form-group">
@@ -206,7 +213,7 @@
                                         </div>
                                     </div>
                                 </div>
-    
+
                                 <!-- Submit Button -->
                                 <div class="form-group">
                                     <button class="btn btn-main btn-round-full">Submit Application<i class="ml-2 icofont-simple-right"></i></button>

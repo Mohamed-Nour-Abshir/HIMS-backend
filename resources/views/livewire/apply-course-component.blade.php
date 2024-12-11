@@ -102,6 +102,13 @@
                         <!-- Address -->
                         <div class="col-lg-6">
                             <div class="form-group">
+                                <label for="">BMDC Registration No</label>
+                                <input wire:model="bmdc_reg_no" type="text" class="form-control" placeholder="BMDC Registration No">
+                                @error('bmdc_reg_no') <span class="text-danger">{{$message}}</span> @enderror
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
                                 <label for="">Present address</label>
                                 <input wire:model="address" type="text" class="form-control" placeholder="Address">
                                 @error('address') <span class="text-danger">{{$message}}</span> @enderror

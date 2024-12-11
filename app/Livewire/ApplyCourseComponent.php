@@ -15,6 +15,7 @@ class ApplyCourseComponent extends Component
     public $course_name;
     public $dob;
     public $additional_info;
+    public $bmdc_reg_no;
 
     public function updated($fillable){
         $this->validateOnly($fillable, [
@@ -24,7 +25,8 @@ class ApplyCourseComponent extends Component
             'address'=>'required',
             'course_name'=>'required',
             'dob'=>'required',
-            
+            'bmdc_reg_no'=>'required',
+
         ]);
     }
 
@@ -36,7 +38,8 @@ class ApplyCourseComponent extends Component
             'address'=>'required',
             'course_name'=>'required',
             'dob'=>'required',
-            
+            'bmdc_reg_no'=>'required',
+
         ]);
 
         $admission = new Admission();
@@ -47,6 +50,7 @@ class ApplyCourseComponent extends Component
         $admission->course_name = $this->course_name;
         $admission->dob = $this->dob;
         $admission->additional_info = $this->additional_info;
+        $admission->bmdc_reg_no = $this->bmdc_reg_no;
 
         $admission->save();
         session()->flash('message', 'Thanks for your application will contact you soon!');
@@ -61,6 +65,7 @@ class ApplyCourseComponent extends Component
         $this->course_name = '';
         $this->dob = '';
         $this->additional_info = '';
+        $this->bmdc_reg_no = '';
     }
     public function render()
     {
