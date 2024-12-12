@@ -40,13 +40,13 @@
                     <div class="position-relative doctor-inner-box">
                         <div class="doctor-profile">
                             <div class="doctor-img">
-                                <a href="course-details.html">
+                                <a href="{{ route('course.details', $course->slug) }}">
                                     <img src="{{ asset('assets/images/courses/'.$course->image) }}" alt="doctor-image" class="img-fluid w-100">
                                 </a>
                             </div>
                         </div>
                         <div class="p-3 mt-3 text-center text-white content bg-info">
-                            <h4 class="mb-0"><a href="course-details.html" class="text-white">{{ $course->course_name }}</a></h4>
+                            <h4 class="mb-0"><a href="{{ route('course.details', $course->slug) }}" class="text-white">{{ $course->course_name }}</a></h4>
                             <p class="mb-0">{{ $course->department }}</p>
                             <small><a href="{{route('apply')}}" class="text-white">more details | Enroll now</a></small>
                         </div>

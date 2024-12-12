@@ -53,6 +53,7 @@ Route::get('/news-details/{slug}', App\Livewire\NewsDetailsComponent::class)->na
 Route::get('/affiliate', AffiliateComponent::class)->name('affiliate');
 Route::get('/teachers', TeachersComponent::class)->name('teachers');
 Route::get('/courses', CoursesComponent::class)->name('courses');
+Route::get('/course-details/{slug}', App\Livewire\CourseDetailsComponent::class)->name('course.details');
 Route::get('/admission-fess', AdmissionFeesComponent::class)->name('admission-fees');
 Route::get('/our-gallery', App\Livewire\GalleryComponent::class)->name('gallery');
 Route::get('/contact-us', ContactComponent::class)->name('contact');

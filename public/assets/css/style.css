@@ -1500,3 +1500,25 @@ a:focus {
   height: 100%;
 }
 .card_nav{height: 100%;}
+
+/* course details  */
+.course-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.course-header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.course-module ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+.trainer-info {
+    font-size: 1.2em;
+    color: #6c757d;
+}
